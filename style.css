@@ -1,116 +1,138 @@
-/* Author: Rabib Mehmed - Premium Dark Theme */
+/* Author: Rabib Mehmed - Premium No-Scroll Theme */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #F7FAFC;
+    background-color: #0b0b1a; /* ডার্ক ব্যাকগ্রাউন্ড */
+    color: white;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: hidden; /* স্ক্রল বন্ধ করার জন্য */
 }
 
-.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 40px; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
-/* Header */
-header { background: #1A1A3A; padding: 12px 0; color: white; }
-.nav-container { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 20px; font-weight: bold; }
-.accent { color: #A080DF; }
-nav ul { display: flex; list-style: none; gap: 15px; }
-nav ul li a { color: white; text-decoration: none; font-size: 13px; opacity: 0.8; }
+/* --- Header --- */
+header { 
+    padding: 20px 0; 
+}
+.nav-container { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+.logo { font-size: 22px; font-weight: bold; }
+.logo .accent { color: #8a63ff; }
+nav ul { display: flex; list-style: none; gap: 20px; }
+nav ul li a { color: #ccc; text-decoration: none; font-size: 14px; }
+.get-started { 
+    background: #6c5ce7; 
+    padding: 8px 18px; 
+    border-radius: 8px; 
+    text-decoration: none; 
+    color: white; 
+    font-size: 14px; 
+}
 
-/* Hero Section */
+/* --- Hero Section --- */
 .hero {
     flex: 1;
-    background: radial-gradient(circle at 80% 50%, #3A2A5A 0%, #1A1A3A 70%);
-    color: white;
     display: flex;
     align-items: center;
     position: relative;
-    padding-top: 20px;
+    padding-bottom: 0; /* নিচের ব্যানারের সাথে লাগানোর জন্য */
 }
 
 .hero-content {
     display: flex;
-    align-items: flex-end; /* ছবিকে নিচে নামানোর জন্য */
     justify-content: space-between;
+    align-items: flex-end; /* কন্টেন্টকে ব্যানারের সাথে মিশিয়ে দেবে */
     width: 100%;
     height: 100%;
 }
 
-.hero-text { flex: 1.2; padding-bottom: 60px; } /* টেক্সট একটু উপরে রাখা হলো */
+.hero-text { 
+    flex: 1; 
+    padding-bottom: 100px; /* টেক্সটকে একটু উপরে রাখা হয়েছে */
+}
 .welcome-badge {
-    background: rgba(255,255,255,0.1);
-    display: inline-block;
-    padding: 4px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 6px 15px;
     border-radius: 20px;
     font-size: 12px;
-    margin-bottom: 10px;
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #a29bfe;
 }
-.hero-text h1 { font-size: 40px; line-height: 1.1; margin-bottom: 10px; }
-.hero-text p { font-size: 14px; opacity: 0.7; max-width: 400px; }
+.hero-text h1 { font-size: 56px; line-height: 1.1; margin-bottom: 20px; }
+.hero-text h1 span { color: #8a63ff; }
+.hero-text p { font-size: 16px; color: #aaa; margin-bottom: 30px; max-width: 450px; }
+.hero-btns { display: flex; gap: 15px; }
+.btn-primary { background: #6c5ce7; padding: 12px 25px; border-radius: 10px; text-decoration: none; color: white; font-weight: 600; }
+.btn-secondary { border: 1px solid #444; padding: 12px 25px; border-radius: 10px; text-decoration: none; color: white; }
 
-/* Image with Glowing Shadow and No Gap */
+/* --- Image with Purple Glow Effect --- */
 .hero-image {
     flex: 1;
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: flex-end; /* ছবিকে একদম নিচে রাখবে */
+    justify-content: flex-end;
+    align-items: flex-end;
     height: 100%;
 }
 
+/* গ্লো ইফেক্ট */
 .hero-image::before {
     content: "";
     position: absolute;
-    width: 350px;
-    height: 350px;
-    background: rgba(160, 128, 223, 0.2);
-    filter: blur(80px);
-    border-radius: 50%;
-    z-index: 1;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(138, 99, 255, 0.2) 0%, transparent 70%);
     bottom: 50px;
+    right: -50px;
+    z-index: 1;
 }
 
 .hero-image img {
-    width: 100%;
-    max-width: 420px;
+    max-width: 500px;
     z-index: 2;
     display: block;
-    margin-bottom: -10px; /* কালো ব্যানারের সাথে মিশিয়ে দেওয়ার জন্য */
+    margin-bottom: -1px; /* ব্যানারের সাথে গ্যাপ বন্ধ করবে */
+    filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
 }
 
-/* Stats Container - The Black Banner */
+/* --- Stats Banner (Black Section) --- */
 .stats-container {
+    background: #12122b;
     display: flex;
     justify-content: space-around;
-    background: #111;
-    color: white;
-    padding: 20px;
-    border-radius: 20px 20px 0 0; /* উপরের কোণা গোল */
-    position: relative;
+    padding: 30px 0;
+    border-radius: 20px 20px 0 0;
+    border-top: 1px solid rgba(255,255,255,0.05);
     z-index: 10;
-    box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
 }
+.stat-item { text-align: center; }
+.stat-item .count { display: block; font-size: 24px; font-weight: bold; color: white; }
+.stat-item .label { font-size: 12px; color: #666; text-transform: uppercase; }
 
-.stat-item .count { display: block; font-size: 20px; font-weight: bold; color: #A080DF; }
-.stat-item .label { font-size: 10px; color: #888; }
-
-/* Bottom Motivational Bar */
-.bottom-bar {
-    background: white;
-    padding: 15px 0;
-    text-align: center;
-}
-.motivational-quote { font-size: 18px; font-weight: bold; color: #1A1A3A; }
-
-/* Mobile View */
-@media (max-width: 768px) {
+/* --- Mobile Fix --- */
+@media (max-width: 900px) {
     body { overflow-y: auto; height: auto; }
-    .hero-content { flex-direction: column; align-items: center; }
-    .hero-text { text-align: center; padding-bottom: 20px; }
-    .hero-image img { max-width: 300px; }
+    .hero-content { flex-direction: column; align-items: center; text-align: center; }
+    .hero-text { padding-bottom: 40px; padding-top: 40px; }
+    .hero-image img { max-width: 100%; }
 }
