@@ -1,63 +1,47 @@
-/* Author: Rabib Mehmed 
-   Theme: Single Page Fit (No Scroll)
-*/
-
+/* Author: Rabib Mehmed - Premium Dark Theme */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #F7FAFC;
-    color: #333;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden; /* স্ক্রলবার বন্ধ করার জন্য */
+    overflow: hidden;
 }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-/* Header - Compact */
-header {
-    background: #1A1A3A;
-    padding: 10px 0;
-    color: white;
-}
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+/* Header */
+header { background: #1A1A3A; padding: 12px 0; color: white; }
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
 .logo { font-size: 20px; font-weight: bold; }
 .accent { color: #A080DF; }
 nav ul { display: flex; list-style: none; gap: 15px; }
-nav ul li a { color: white; text-decoration: none; font-size: 13px; }
+nav ul li a { color: white; text-decoration: none; font-size: 13px; opacity: 0.8; }
 
-/* Hero Section - Optimized for Height */
+/* Hero Section */
 .hero {
     flex: 1;
-    background: linear-gradient(135deg, #1A1A3A 0%, #3A2A5A 100%);
+    background: radial-gradient(circle at 80% 50%, #3A2A5A 0%, #1A1A3A 70%);
     color: white;
     display: flex;
     align-items: center;
-    padding: 20px 0;
+    position: relative;
+    padding-top: 20px;
 }
+
 .hero-content {
     display: flex;
-    align-items: center;
+    align-items: flex-end; /* ছবিকে নিচে নামানোর জন্য */
     justify-content: space-between;
     width: 100%;
+    height: 100%;
 }
-.hero-text { flex: 1.2; }
+
+.hero-text { flex: 1.2; padding-bottom: 60px; } /* টেক্সট একটু উপরে রাখা হলো */
 .welcome-badge {
     background: rgba(255,255,255,0.1);
     display: inline-block;
@@ -66,90 +50,67 @@ nav ul li a { color: white; text-decoration: none; font-size: 13px; }
     font-size: 12px;
     margin-bottom: 10px;
 }
-.hero-text h1 {
-    font-size: 32px;
-    line-height: 1.1;
-    margin-bottom: 10px;
-}
-.hero-text p { font-size: 14px; opacity: 0.8; margin-bottom: 15px; }
-.hero-btns { display: flex; gap: 10px; }
-.btn-primary { background: #6C5CE7; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; }
-.btn-secondary { border: 1px solid white; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-size: 14px; }
+.hero-text h1 { font-size: 40px; line-height: 1.1; margin-bottom: 10px; }
+.hero-text p { font-size: 14px; opacity: 0.7; max-width: 400px; }
 
-.hero-image { flex: 0.8; position: relative; text-align: right; }
-.hero-image img { width: 100%; max-width: 280px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-.profile-card {
-    position: absolute;
-    bottom: 15px;
-    right: -10px;
-    background: rgba(0,0,0,0.7);
-    backdrop-filter: blur(8px);
-    padding: 10px;
-    border-radius: 10px;
+/* Image with Glowing Shadow and No Gap */
+.hero-image {
+    flex: 1;
+    position: relative;
     display: flex;
-    align-items: center;
-    gap: 8px;
-    border: 1px solid rgba(255,255,255,0.1);
+    justify-content: center;
+    align-items: flex-end; /* ছবিকে একদম নিচে রাখবে */
+    height: 100%;
 }
-.profile-info h3 { font-size: 12px; color: white; }
-.profile-info p { font-size: 10px; color: #aaa; }
 
-/* Stats - Compact Row */
+.hero-image::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(160, 128, 223, 0.2);
+    filter: blur(80px);
+    border-radius: 50%;
+    z-index: 1;
+    bottom: 50px;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 420px;
+    z-index: 2;
+    display: block;
+    margin-bottom: -10px; /* কালো ব্যানারের সাথে মিশিয়ে দেওয়ার জন্য */
+}
+
+/* Stats Container - The Black Banner */
 .stats-container {
     display: flex;
     justify-content: space-around;
     background: #111;
     color: white;
-    padding: 15px;
-    border-radius: 15px;
-    margin-top: -30px;
+    padding: 20px;
+    border-radius: 20px 20px 0 0; /* উপরের কোণা গোল */
+    position: relative;
     z-index: 10;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
 }
-.stat-item .count { display: block; font-size: 18px; font-weight: bold; color: #A080DF; }
-.stat-item .label { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; }
 
-/* Bottom Section - Micro Course Card */
-.courses { padding: 20px 0; text-align: center; }
-.motivational-quote { font-size: 20px; font-weight: bold; margin-bottom: 15px; color: #1A1A3A; }
+.stat-item .count { display: block; font-size: 20px; font-weight: bold; color: #A080DF; }
+.stat-item .label { font-size: 10px; color: #888; }
 
-.course-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 20px;
-    align-items: center;
+/* Bottom Motivational Bar */
+.bottom-bar {
+    background: white;
+    padding: 15px 0;
+    text-align: center;
 }
-.course-card.cinematic {
-    background: #1a1a1a;
-    border-radius: 15px;
-    display: flex;
-    padding: 15px;
-    color: white;
-    align-items: center;
-    text-align: left;
-    gap: 15px;
-}
-.course-card.cinematic img { width: 120px; height: 80px; border-radius: 10px; object-fit: cover; }
-.course-card.cinematic h3 { font-size: 16px; }
-.price { font-size: 20px; font-weight: bold; color: #A080DF; }
+.motivational-quote { font-size: 18px; font-weight: bold; color: #1A1A3A; }
 
-.social-links-mini {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-.social-links-mini i {
-    font-size: 24px;
-    color: #1A1A3A;
-    transition: 0.3s;
-}
-.social-links-mini i:hover { color: #6C5CE7; }
-
-/* Mobile View Adjustments */
+/* Mobile View */
 @media (max-width: 768px) {
     body { overflow-y: auto; height: auto; }
-    .hero-content { flex-direction: column; text-align: center; }
-    .hero-image img { max-width: 220px; margin-top: 20px; }
-    .stats-container { margin-top: 20px; flex-wrap: wrap; gap: 10px; }
-    .course-grid { grid-template-columns: 1fr; }
+    .hero-content { flex-direction: column; align-items: center; }
+    .hero-text { text-align: center; padding-bottom: 20px; }
+    .hero-image img { max-width: 300px; }
 }
