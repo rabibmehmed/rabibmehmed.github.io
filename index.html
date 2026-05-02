@@ -3,83 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rabib Mehmed - আপনার লার্নিং প্ল্যাটফর্ম</title>
-    <style>
-        /* মূল স্টাইল */
-        body { font-family: sans-serif; margin: 0; padding: 0; background-color: #F7FAFC; }
-        .hero { background: linear-gradient(135deg, #1A1A3A 0%, #3A2A5A 100%); color: white; padding: 100px 20px; text-align: center; }
-        .hero h1 { font-size: 48px; margin-bottom: 20px; }
-        .hero h1 span { color: #A080DF; }
-        .hero p { font-size: 18px; color: #E0E0E0; max-width: 700px; margin: 0 auto 30px; }
-        .hero-btns { display: flex; justify-content: center; gap: 15px; }
-        .btn { padding: 10px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; }
-        .btn-primary { background-color: #6C5CE7; color: white; }
-        .btn-secondary { background-color: transparent; border: 1px solid white; color: white; }
-
-        /* আপনি এবং পরিচয় কার্ড */
-        .personal-section { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: -100px auto 0; padding: 0 20px; }
-        .profile-container { position: relative; }
-        .profile-pic { width: 350px; height: auto; border-radius: 20px; box-shadow: 0 15px 30px rgba(0,0,0,0.3); }
-        .profile-card { background: rgba(30, 30, 50, 0.9); border-radius: 10px; padding: 15px; position: absolute; bottom: 10px; left: 10px; color: white; max-width: 280px; }
-        .profile-card h3 { margin: 0; font-size: 18px; }
-        .profile-card p { margin: 5px 0 0; font-size: 14px; opacity: 0.8; }
-
-        /* কোর্স সেকশন */
-        .courses { padding: 80px 20px; max-width: 1200px; margin: 0 auto; text-align: center; }
-        .courses h2 { font-size: 36px; color: #1A1A3A; margin-bottom: 50px; }
-        .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .course-card { background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: left; }
-        .course-card img { width: 100%; height: 180px; object-fit: cover; }
-        .course-details { padding: 20px; }
-        .course-card h3 { font-size: 20px; margin: 0 0 10px; color: #1A1A3A; }
-        .course-meta { display: flex; justify-content: space-between; font-size: 14px; color: #777; }
-    </style>
+    <title>Mehmed University - All-in-One Mastery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <header>
+        <div class="container nav-container">
+            <div class="logo">Rabib <span class="accent">Mehmed</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="btn-primary-header">Get Started 🚀</a>
+        </div>
+    </header>
+
     <section class="hero">
-        <h1>Learn. Apply. Earn <span>Online.</span></h1>
-        <p>আমরা আপনাকে ডিজিটাল স্কিল এবং ফ্রিল্যান্সিং কোর্সের মাধ্যমে আর্থিক স্বাধীনতা এবং সফল ক্যারিয়ার তৈরি করতে সাহায্য করি।</p>
-        <div class="hero-btns">
-            <a href="#" class="btn btn-primary">কোর্সগুলো দেখুন</a>
-            <a href="#" class="btn btn-secondary">আমার সম্পর্কে জানুন</a>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="welcome-badge">Welcome to <span class="light">My Learning Platform</span> 👋</div>
+                <h1>Learn. Apply. Earn <span class="accent-large">Online.</span></h1>
+                <p>Practical Digital Skills & Freelancing Courses Designed to Help You Build Freedom & Income.</p>
+                <div class="hero-btns">
+                    <a href="#" class="btn-primary">Browse Courses</a>
+                    <a href="#" class="btn-secondary">About Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="profile.png" alt="Rabib Mehmed">
+                <div class="profile-card">
+                    <div class="verified-icon">✔️</div>
+                    <div class="profile-info">
+                        <h3>Rabib Mehmed</h3>
+                        <p>Digital Entrepreneur</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="personal-section">
-        <div class="profile-container">
-            <img src="YOUR_IMAGE_PATH_HERE.jpg" alt="Rabib Mehmed" class="profile-pic">
-            <div class="profile-card">
-                <h3>Rabib Mehmed</h3>
-                <p>Digital Entrepreneur | Digital Marketing Specialist</p>
-            </div>
+    <section class="stats">
+        <div class="container stats-container">
+            <div class="stat-item"><span class="count">1,200+</span><span class="label">Students</span></div>
+            <div class="stat-item"><span class="count">1+</span><span class="label">Comprehensive Course</span></div>
+            <div class="stat-item"><span class="count">4.9/5</span><span class="label">Rating</span></div>
+            <div class="stat-item"><span class="count">100%</span><span class="label">Satisfaction</span></div>
         </div>
-        </section>
+    </section>
 
     <section class="courses">
-        <h2>আমাদের জনপ্রিয় কোর্সসমূহ</h2>
-        <div class="course-grid">
-            <div class="course-card">
-                <img src="https://via.placeholder.com/280x180" alt="Shopify Store Design">
-                <div class="course-details">
-                    <h3>Shopify Store Design</h3>
-                    <div class="course-meta">
-                        <span><i class="fas fa-users"></i> 320+ Students</span>
-                        <span>৳ 1,499</span>
+        <div class="container">
+            <h2 class="motivational-quote">"Empower Your Mind, Build Your Freedom."</h2>
+            <p>Your journey to mastery starts here.</p>
+            
+            <div class="course-grid">
+                <div class="course-card cinematic">
+                    <div class="card-overlay">
+                        <img src="https://i.ibb.co/LzdY7xK/dark-university.jpg" alt="Mehmed University">
+                        <div class="card-content">
+                            <h3>Mehmed University</h3>
+                            <p>All-in-One Comprehensive Mastery</p>
+                            <span class="price">$81</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="course-card">
-                <img src="https://via.placeholder.com/280x180" alt="Dropshipping With Shopify">
-                <div class="course-details">
-                    <h3>Dropshipping A to Z</h3>
-                    <div class="course-meta">
-                        <span><i class="fas fa-users"></i> 450+ Students</span>
-                        <span>৳ 1,699</span>
-                    </div>
+
+                <div class="course-card social">
+                    <div class="social-icon fb"><i class="fab fa-facebook"></i></div>
+                    <h3>My Facebook Page</h3>
+                    <p>Updates & Insights</p>
+                    <a href="#" class="social-link">Follow Now</a>
+                </div>
+
+                <div class="course-card social">
+                    <div class="social-icon yt"><i class="fab fa-youtube"></i></div>
+                    <h3>My YouTube Channel</h3>
+                    <p>Video Guides</p>
+                    <a href="#" class="social-link">Subscribe</a>
+                </div>
+
+                <div class="course-card social">
+                    <div class="social-icon tg"><i class="fab fa-telegram"></i></div>
+                    <h3>My Telegram Channel</h3>
+                    <p>Direct Alerts</p>
+                    <a href="#" class="social-link">Join Group</a>
                 </div>
             </div>
-            </div>
+        </div>
     </section>
 
 </body>
