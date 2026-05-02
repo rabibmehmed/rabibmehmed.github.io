@@ -1,71 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="bn">
 <head>
-    <title>My Business Website</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Rabib Mehmed - আপনার লার্নিং প্ল্যাটফর্ম</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial;
-            background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
-            color: white;
-            text-align: center;
-        }
+        /* মূল স্টাইল */
+        body { font-family: sans-serif; margin: 0; padding: 0; background-color: #F7FAFC; }
+        .hero { background: linear-gradient(135deg, #1A1A3A 0%, #3A2A5A 100%); color: white; padding: 100px 20px; text-align: center; }
+        .hero h1 { font-size: 48px; margin-bottom: 20px; }
+        .hero h1 span { color: #A080DF; }
+        .hero p { font-size: 18px; color: #E0E0E0; max-width: 700px; margin: 0 auto 30px; }
+        .hero-btns { display: flex; justify-content: center; gap: 15px; }
+        .btn { padding: 10px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; }
+        .btn-primary { background-color: #6C5CE7; color: white; }
+        .btn-secondary { background-color: transparent; border: 1px solid white; color: white; }
 
-        .container {
-            padding: 60px 20px;
-        }
+        /* আপনি এবং পরিচয় কার্ড */
+        .personal-section { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: -100px auto 0; padding: 0 20px; }
+        .profile-container { position: relative; }
+        .profile-pic { width: 350px; height: auto; border-radius: 20px; box-shadow: 0 15px 30px rgba(0,0,0,0.3); }
+        .profile-card { background: rgba(30, 30, 50, 0.9); border-radius: 10px; padding: 15px; position: absolute; bottom: 10px; left: 10px; color: white; max-width: 280px; }
+        .profile-card h3 { margin: 0; font-size: 18px; }
+        .profile-card p { margin: 5px 0 0; font-size: 14px; opacity: 0.8; }
 
-        h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 18px;
-            opacity: 0.9;
-        }
-
-        .card {
-            background: white;
-            color: black;
-            width: 300px;
-            margin: 30px auto;
-            padding: 20px;
-            border-radius: 15px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 20px;
-            margin-top: 15px;
-            background: #ff6600;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-        }
-
-        .btn:hover {
-            background: #ff3300;
-        }
+        /* কোর্স সেকশন */
+        .courses { padding: 80px 20px; max-width: 1200px; margin: 0 auto; text-align: center; }
+        .courses h2 { font-size: 36px; color: #1A1A3A; margin-bottom: 50px; }
+        .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .course-card { background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: left; }
+        .course-card img { width: 100%; height: 180px; object-fit: cover; }
+        .course-details { padding: 20px; }
+        .course-card h3 { font-size: 20px; margin: 0 0 10px; color: #1A1A3A; }
+        .course-meta { display: flex; justify-content: space-between; font-size: 14px; color: #777; }
     </style>
 </head>
-
 <body>
 
-<div class="container">
+    <section class="hero">
+        <h1>Learn. Apply. Earn <span>Online.</span></h1>
+        <p>আমরা আপনাকে ডিজিটাল স্কিল এবং ফ্রিল্যান্সিং কোর্সের মাধ্যমে আর্থিক স্বাধীনতা এবং সফল ক্যারিয়ার তৈরি করতে সাহায্য করি।</p>
+        <div class="hero-btns">
+            <a href="#" class="btn btn-primary">কোর্সগুলো দেখুন</a>
+            <a href="#" class="btn btn-secondary">আমার সম্পর্কে জানুন</a>
+        </div>
+    </section>
 
-    <h1>Welcome to My Website</h1>
-    <p>Learn Dropshipping & Online Business with me</p>
+    <section class="personal-section">
+        <div class="profile-container">
+            <img src="YOUR_IMAGE_PATH_HERE.jpg" alt="Rabib Mehmed" class="profile-pic">
+            <div class="profile-card">
+                <h3>Rabib Mehmed</h3>
+                <p>Digital Entrepreneur | Digital Marketing Specialist</p>
+            </div>
+        </div>
+        </section>
 
-    <div class="card">
-        <h2>🔥 My Course</h2>
-        <p>Start earning from online business using mobile only</p>
-        <a class="btn" href="#">Join Now</a>
-    </div>
-
-</div>
+    <section class="courses">
+        <h2>আমাদের জনপ্রিয় কোর্সসমূহ</h2>
+        <div class="course-grid">
+            <div class="course-card">
+                <img src="https://via.placeholder.com/280x180" alt="Shopify Store Design">
+                <div class="course-details">
+                    <h3>Shopify Store Design</h3>
+                    <div class="course-meta">
+                        <span><i class="fas fa-users"></i> 320+ Students</span>
+                        <span>৳ 1,499</span>
+                    </div>
+                </div>
+            </div>
+            <div class="course-card">
+                <img src="https://via.placeholder.com/280x180" alt="Dropshipping With Shopify">
+                <div class="course-details">
+                    <h3>Dropshipping A to Z</h3>
+                    <div class="course-meta">
+                        <span><i class="fas fa-users"></i> 450+ Students</span>
+                        <span>৳ 1,699</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </section>
 
 </body>
 </html>
