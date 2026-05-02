@@ -1,74 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Poppins', sans-serif; background-color: #050510; color: white; overflow-x: hidden; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #050510;
+    color: white;
+    height: 100vh; /* এক স্ক্রিনে রাখার জন্য */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* স্ক্রল বন্ধ করার জন্য */
+}
 
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
 /* Header */
-header { padding: 15px 0; background: #050510; }
+header { padding: 15px 0; z-index: 10; }
 .nav-bar { display: flex; justify-content: space-between; align-items: center; }
 .logo { font-size: 22px; font-weight: 700; }
 .accent { color: #8a63ff; }
 nav ul { display: flex; list-style: none; gap: 20px; }
-nav ul li a { color: #aaa; text-decoration: none; font-size: 14px; }
+nav ul li a { color: #ccc; text-decoration: none; font-size: 14px; }
 .btn-top { background: #6c5ce7; padding: 8px 18px; border-radius: 8px; color: white; text-decoration: none; font-size: 13px; font-weight: 600; }
 
 /* Hero Section */
-.hero { background: radial-gradient(circle at 70% 30%, #1a1a3a 0%, #050510 100%); padding-top: 20px; }
-.hero-wrapper { display: flex; align-items: flex-end; justify-content: space-between; }
-.hero-text { flex: 1; padding-bottom: 60px; }
-.badge { background: rgba(138, 99, 255, 0.1); color: #a29bfe; padding: 5px 12px; border-radius: 20px; font-size: 12px; margin-bottom: 15px; display: inline-block; }
-.hero-text h1 { font-size: 48px; line-height: 1.1; margin-bottom: 15px; }
-.hero-text h1 span { color: #8a63ff; }
-.hero-text p { color: #888; margin-bottom: 25px; font-size: 15px; max-width: 420px; }
-.hero-btns { display: flex; gap: 12px; margin-bottom: 25px; }
-.btn-primary { background: #6c5ce7; padding: 10px 25px; border-radius: 8px; color: white; text-decoration: none; font-weight: 600; }
-.btn-secondary { border: 1px solid #333; padding: 10px 25px; border-radius: 8px; color: white; text-decoration: none; }
-.social-mini { display: flex; align-items: center; gap: 10px; font-size: 14px; color: #555; }
-.social-mini a { color: #aaa; font-size: 18px; transition: 0.3s; }
-.social-mini a:hover { color: #8a63ff; }
+.hero { flex: 1; display: flex; align-items: center; position: relative; }
+.hero-wrapper { display: flex; align-items: flex-end; justify-content: space-between; width: 100%; height: 100%; }
 
-/* Image & Glow */
-.hero-image-container { flex: 1; display: flex; justify-content: flex-end; align-items: flex-end; position: relative; }
-.glow-circle { position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(138, 99, 255, 0.2) 0%, transparent 70%); bottom: 20px; right: -20px; z-index: 1; }
-.main-img { max-width: 450px; z-index: 2; position: relative; margin-bottom: -5px; }
-.info-tag { position: absolute; bottom: 80px; right: 0; z-index: 3; background: rgba(20, 20, 40, 0.8); backdrop-filter: blur(10px); padding: 10px 15px; border-radius: 12px; display: flex; align-items: center; gap: 10px; border: 1px solid rgba(255,255,255,0.1); }
-.check { background: #8a63ff; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 8px; }
+.hero-text { flex: 1; padding-bottom: 50px; }
+.badge { background: rgba(138, 99, 255, 0.1); color: #a29bfe; padding: 6px 12px; border-radius: 20px; font-size: 12px; margin-bottom: 15px; display: inline-block; }
+.hero-text h1 { font-size: 45px; line-height: 1.1; margin-bottom: 15px; }
+.hero-text h1 span { color: #8a63ff; }
+.hero-text p { color: #888; margin-bottom: 25px; font-size: 15px; max-width: 400px; }
+.hero-btns { display: flex; gap: 15px; }
+.btn-primary { background: #6c5ce7; padding: 10px 25px; border-radius: 10px; color: white; text-decoration: none; font-weight: 600; }
+.btn-secondary { border: 1px solid #333; padding: 10px 25px; border-radius: 10px; color: white; text-decoration: none; }
+
+/* Image & Glow Effect */
+.hero-image-container { flex: 1; display: flex; justify-content: flex-end; align-items: flex-end; position: relative; height: 100%; }
+.glow-circle { 
+    position: absolute; width: 450px; height: 450px; 
+    background: radial-gradient(circle, rgba(138, 99, 255, 0.2) 0%, transparent 70%); 
+    bottom: 20px; right: -50px; z-index: 1; 
+}
+.main-img { max-width: 450px; z-index: 2; position: relative; margin-bottom: -5px; } /* ব্যানারের সাথে লেগে থাকবে */
+
+.info-tag {
+    position: absolute; bottom: 80px; right: 20px; z-index: 3;
+    background: rgba(20, 20, 40, 0.8); backdrop-filter: blur(10px);
+    padding: 10px 15px; border-radius: 15px; display: flex; align-items: center; gap: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.check { background: #8a63ff; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; }
 .info-tag h4 { font-size: 13px; }
 .info-tag p { font-size: 10px; color: #888; }
 
-/* Stats Banner */
-.stats-banner { background: #11112b; padding: 25px 0; border-top: 1px solid #1a1a3a; }
-.stats-grid { display: flex; justify-content: space-around; }
-.stat { display: flex; align-items: center; gap: 10px; }
-.stat i { font-size: 20px; color: #8a63ff; }
-.stat h3 { font-size: 20px; }
-.stat p { font-size: 11px; color: #666; text-transform: uppercase; }
+/* কালো চিকন ব্যানার */
+.black-banner {
+    background: #000;
+    padding: 20px 0;
+    z-index: 5;
+    border-top: 1px solid #1a1a1a;
+}
+.banner-grid { display: flex; justify-content: space-around; align-items: center; }
+.stat { display: flex; align-items: center; gap: 10px; font-size: 14px; color: #aaa; }
+.stat i { color: #8a63ff; font-size: 18px; }
 
-/* Courses Section */
-.courses-section { background: white; color: #333; padding: 50px 0; }
-.section-title { text-align: center; margin-bottom: 30px; }
-.section-title span { color: #6c5ce7; font-weight: 600; font-size: 12px; }
-.section-title h2 { font-size: 28px; margin: 5px 0; color: #050510; }
-.section-title p { color: #777; font-size: 14px; }
-.course-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.course-card { background: #f9f9f9; border-radius: 15px; overflow: hidden; border: 1px solid #eee; transition: 0.3s; }
-.course-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-.course-card img { width: 100%; height: 180px; object-fit: cover; }
-.course-info { padding: 15px; }
-.course-info h3 { font-size: 16px; margin-bottom: 10px; height: 40px; overflow: hidden; }
-.meta { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #777; }
-.price { color: #6c5ce7; font-weight: 700; font-size: 16px; }
-
-/* Mobile Responsive */
+/* মোবাইল রেসপন্সিভ - ছবি উপরে থাকবে */
 @media (max-width: 768px) {
-    body { overflow-y: auto; }
-    nav, .btn-top { display: none; }
-    .hero-wrapper { flex-direction: column; align-items: center; text-align: center; }
+    body { overflow-y: auto; height: auto; }
+    .hero-wrapper { flex-direction: column-reverse; align-items: center; text-align: center; }
     .hero-text { padding: 40px 0; }
-    .hero-text h1 { font-size: 36px; }
-    .main-img { max-width: 320px; }
-    .stats-grid { flex-wrap: wrap; gap: 20px; }
-    .course-grid { grid-template-columns: 1fr; }
+    .hero-image-container { height: auto; margin-top: 20px; }
+    .main-img { max-width: 100%; margin-bottom: 0; }
+    .banner-grid { flex-direction: column; gap: 15px; }
+    nav, .btn-top { display: none; }
 }
