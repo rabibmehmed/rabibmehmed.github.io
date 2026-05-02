@@ -6,73 +6,91 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #050510;
     color: white;
-    height: 100vh; /* এক স্ক্রিনে রাখার জন্য */
-    display: flex;
-    flex-direction: column;
-    overflow: hidden; /* স্ক্রল বন্ধ করার জন্য */
+    overflow-x: hidden;
 }
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 15px; }
 
 /* Header */
-header { padding: 15px 0; z-index: 10; }
+header { padding: 10px 0; background: #050510; }
 .nav-bar { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 22px; font-weight: 700; }
+.logo { font-size: 20px; font-weight: 700; color: white; }
 .accent { color: #8a63ff; }
-nav ul { display: flex; list-style: none; gap: 20px; }
-nav ul li a { color: #ccc; text-decoration: none; font-size: 14px; }
-.btn-top { background: #6c5ce7; padding: 8px 18px; border-radius: 8px; color: white; text-decoration: none; font-size: 13px; font-weight: 600; }
+nav ul { display: flex; list-style: none; gap: 15px; }
+nav ul li a { color: #ccc; text-decoration: none; font-size: 12px; font-weight: 500; }
+.btn-top { background: #6c5ce7; padding: 6px 15px; border-radius: 6px; color: white; text-decoration: none; font-size: 12px; }
 
 /* Hero Section */
-.hero { flex: 1; display: flex; align-items: center; position: relative; }
+.hero-section { height: 65vh; display: flex; align-items: flex-end; position: relative; }
 .hero-wrapper { display: flex; align-items: flex-end; justify-content: space-between; width: 100%; height: 100%; }
 
-.hero-text { flex: 1; padding-bottom: 50px; }
-.badge { background: rgba(138, 99, 255, 0.1); color: #a29bfe; padding: 6px 12px; border-radius: 20px; font-size: 12px; margin-bottom: 15px; display: inline-block; }
-.hero-text h1 { font-size: 45px; line-height: 1.1; margin-bottom: 15px; }
+.hero-text { flex: 1; padding-bottom: 40px; }
+.badge { background: rgba(255,255,255,0.05); padding: 5px 12px; border-radius: 20px; font-size: 11px; margin-bottom: 15px; display: inline-block; }
+.hero-text h1 { font-size: 42px; line-height: 1; margin-bottom: 15px; font-weight: 700; }
 .hero-text h1 span { color: #8a63ff; }
-.hero-text p { color: #888; margin-bottom: 25px; font-size: 15px; max-width: 400px; }
-.hero-btns { display: flex; gap: 15px; }
-.btn-primary { background: #6c5ce7; padding: 10px 25px; border-radius: 10px; color: white; text-decoration: none; font-weight: 600; }
-.btn-secondary { border: 1px solid #333; padding: 10px 25px; border-radius: 10px; color: white; text-decoration: none; }
+.hero-text p { color: #888; font-size: 13px; max-width: 380px; margin-bottom: 20px; }
 
-/* Image & Glow Effect */
-.hero-image-container { flex: 1; display: flex; justify-content: flex-end; align-items: flex-end; position: relative; height: 100%; }
-.glow-circle { 
-    position: absolute; width: 450px; height: 450px; 
-    background: radial-gradient(circle, rgba(138, 99, 255, 0.2) 0%, transparent 70%); 
-    bottom: 20px; right: -50px; z-index: 1; 
+.hero-btns { display: flex; gap: 10px; margin-bottom: 20px; }
+.btn-browse { background: #6c5ce7; padding: 10px 20px; border-radius: 8px; color: white; text-decoration: none; font-size: 13px; font-weight: 600; }
+.btn-about { border: 1px solid #333; padding: 10px 20px; border-radius: 8px; color: white; text-decoration: none; font-size: 13px; }
+
+.social-follow { display: flex; align-items: center; gap: 10px; font-size: 12px; color: #555; }
+.social-follow a { background: #1a1a3a; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 12px; }
+.social-follow a.yt { background: #ff0000; }
+.social-follow a.fb { background: #1877f2; }
+.social-follow a.tg { background: #0088cc; }
+
+/* Profile & Glow */
+.hero-image-area { flex: 1; position: relative; display: flex; justify-content: flex-end; align-items: flex-end; height: 100%; }
+.main-glow { position: absolute; width: 350px; height: 350px; background: radial-gradient(circle, rgba(138, 99, 255, 0.2) 0%, transparent 70%); bottom: 0; right: 0; z-index: 1; }
+.profile-img { width: 100%; max-width: 420px; z-index: 2; display: block; margin-bottom: -2px; }
+
+.floating-card {
+    position: absolute; bottom: 60px; right: 20px; z-index: 3;
+    background: rgba(20, 20, 40, 0.85); backdrop-filter: blur(10px);
+    padding: 10px 15px; border-radius: 12px; display: flex; align-items: center; gap: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
 }
-.main-img { max-width: 450px; z-index: 2; position: relative; margin-bottom: -5px; } /* ব্যানারের সাথে লেগে থাকবে */
+.check-icon { background: #8a63ff; color: white; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 9px; }
+.card-info h4 { font-size: 12px; }
+.card-info p { font-size: 9px; color: #aaa; }
 
-.info-tag {
-    position: absolute; bottom: 80px; right: 20px; z-index: 3;
-    background: rgba(20, 20, 40, 0.8); backdrop-filter: blur(10px);
-    padding: 10px 15px; border-radius: 15px; display: flex; align-items: center; gap: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-.check { background: #8a63ff; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; }
-.info-tag h4 { font-size: 13px; }
-.info-tag p { font-size: 10px; color: #888; }
+/* Stats Strip */
+.stats-strip { background: #0b0b1a; padding: 20px 0; border-top: 1px solid #1a1a3a; z-index: 5; }
+.stats-grid { display: flex; justify-content: space-around; }
+.s-item { display: flex; align-items: center; gap: 10px; }
+.s-item i { font-size: 18px; color: #8a63ff; opacity: 0.7; }
+.s-item strong { font-size: 18px; display: block; }
+.s-item p { font-size: 10px; color: #555; text-transform: uppercase; }
 
-/* কালো চিকন ব্যানার */
-.black-banner {
-    background: #000;
-    padding: 20px 0;
-    z-index: 5;
-    border-top: 1px solid #1a1a1a;
-}
-.banner-grid { display: flex; justify-content: space-around; align-items: center; }
-.stat { display: flex; align-items: center; gap: 10px; font-size: 14px; color: #aaa; }
-.stat i { color: #8a63ff; font-size: 18px; }
+/* Bottom Section */
+.bottom-section { background: white; padding: 30px 0; color: #333; }
+.title-center { text-align: center; margin-bottom: 25px; }
+.title-center span { color: #6c5ce7; font-weight: 700; font-size: 11px; }
+.title-center h2 { font-size: 24px; color: #050510; }
+.title-center p { font-size: 12px; color: #777; }
 
-/* মোবাইল রেসপন্সিভ - ছবি উপরে থাকবে */
+.content-split { display: flex; gap: 20px; align-items: flex-start; }
+.course-banner { flex: 1.2; position: relative; border-radius: 15px; overflow: hidden; }
+.course-banner img { width: 100%; display: block; }
+.price-tag { position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); font-size: 24px; font-weight: 700; color: white; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+
+.channel-list { flex: 1; display: flex; flex-direction: column; gap: 10px; }
+.channel-card { display: flex; align-items: center; gap: 15px; padding: 12px; background: #fff; border: 1px solid #eee; border-radius: 12px; }
+.channel-card i { font-size: 30px; }
+.yt-icon { color: #ff0000; }
+.fb-icon { color: #1877f2; }
+.tg-icon { color: #0088cc; }
+.ch-text h4 { font-size: 14px; color: #111; }
+.ch-text p { font-size: 11px; color: #888; }
+
+/* Responsive */
 @media (max-width: 768px) {
-    body { overflow-y: auto; height: auto; }
-    .hero-wrapper { flex-direction: column-reverse; align-items: center; text-align: center; }
-    .hero-text { padding: 40px 0; }
-    .hero-image-container { height: auto; margin-top: 20px; }
-    .main-img { max-width: 100%; margin-bottom: 0; }
-    .banner-grid { flex-direction: column; gap: 15px; }
-    nav, .btn-top { display: none; }
+    .hero-section { height: auto; padding-top: 20px; }
+    .hero-wrapper { flex-direction: column-reverse; align-items: center; }
+    .hero-text { text-align: center; padding: 30px 0; }
+    .hero-btns { justify-content: center; }
+    .social-follow { justify-content: center; }
+    .content-split { flex-direction: column; }
+    .stats-grid { flex-wrap: wrap; gap: 15px; }
 }
