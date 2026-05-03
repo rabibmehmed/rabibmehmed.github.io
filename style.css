@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -6,97 +6,88 @@ body { font-family: 'Poppins', sans-serif; background: #050510; color: white; ov
 
 .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-/* --- বাটন ও কার্ড লিফট ইফেক্ট (ফাস্ট) --- */
-.lift-effect { transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer; }
-.lift-effect:hover { transform: translateY(-10px); }
-
-/* হেডার */
-header { padding: 20px 0; animation: fadeInDown 0.5s ease-out; }
+/* হেডার ও মেনু বাটন */
+header { padding: 15px 0; background: #050510; position: relative; z-index: 100; }
 .nav-bar { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 24px; font-weight: 700; }
+.logo { font-size: 22px; font-weight: 700; color: white; }
 .accent { color: #8a63ff; }
-nav ul { display: flex; list-style: none; gap: 20px; }
-nav ul li a { color: #ccc; text-decoration: none; font-size: 14px; font-weight: 500; }
-.btn-top { background: #6c5ce7; padding: 10px 20px; border-radius: 8px; color: white; text-decoration: none; font-size: 13px; font-weight: 600; }
 
-/* হিরো সেকশন */
-.hero-section { min-height: 75vh; display: flex; align-items: flex-end; padding-bottom: 80px; position: relative; }
+nav ul { display: flex; list-style: none; gap: 15px; }
+.nav-btn { color: #ccc; text-decoration: none; font-size: 13px; font-weight: 500; transition: 0.3s; padding: 5px 10px; border-radius: 5px; }
+.nav-btn:hover { background: rgba(138, 99, 255, 0.1); color: #8a63ff; }
+
+.btn-top { background: #6c5ce7; padding: 8px 18px; border-radius: 8px; color: white; text-decoration: none; font-size: 12px; font-weight: 600; }
+
+/* মোবাইল মেনু আইকন (ডেস্কটপে লুকানো) */
+.mobile-menu-icon { display: none; color: white; font-size: 24px; cursor: pointer; }
+
+/* হিরো সেকশন - ডেস্কটপ */
+.hero-section { min-height: 80vh; display: flex; align-items: flex-end; padding-bottom: 50px; position: relative; }
 .hero-wrapper { display: flex; align-items: flex-end; justify-content: space-between; width: 100%; }
-.hero-text { animation: fadeInLeft 0.5s ease-out; }
-.hero-text h1 { font-size: 55px; line-height: 1.1; margin-bottom: 20px; font-weight: 800; }
+
+.hero-text h1 { font-size: 50px; line-height: 1.1; margin-bottom: 20px; font-weight: 700; }
 .hero-text h1 span { color: #8a63ff; }
-.hero-text p { color: #aaa; font-size: 16px; max-width: 450px; margin-bottom: 35px; }
+.hero-text p { color: #aaa; font-size: 14px; max-width: 400px; margin-bottom: 30px; }
 
-/* সোশ্যাল আইকন (হোয়াইট ট্রান্সপারেন্ট) */
-.social-follow { display: flex; align-items: center; gap: 15px; }
-.si-white { 
-    background: rgba(255, 255, 255, 0.1); width: 40px; height: 40px; border-radius: 50%; 
-    display: flex; align-items: center; justify-content: center; color: white; 
-    text-decoration: none; font-size: 16px; transition: 0.3s;
-}
-.si-white:hover { background: rgba(255, 255, 255, 0.3); transform: translateY(-5px); }
+/* সোশ্যাল আইকন */
+.social-follow { display: flex; align-items: center; gap: 12px; }
+.si-white { background: rgba(255, 255, 255, 0.1); width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 14px; transition: 0.3s; }
+.si-white:hover { background: #8a63ff; transform: translateY(-5px); }
 
-/* প্রোফাইল ইমেজ ও গ্লাস কার্ড */
-.hero-image-area { position: relative; animation: fadeInRight 0.5s ease-out; }
-.profile-img { width: 100%; max-width: 500px; display: block; filter: drop-shadow(0 0 30px rgba(138, 99, 255, 0.2)); }
-.main-glow { position: absolute; width: 450px; height: 450px; background: radial-gradient(circle, rgba(138, 99, 255, 0.3) 0%, transparent 70%); bottom: 0; right: 0; }
-.glass-float-card {
-    position: absolute; bottom: 120px; right: 0; z-index: 10;
+/* প্রোফাইল ইমেজ (ব্যানারের সাথে লাগানো) */
+.hero-image-area { position: relative; margin-bottom: -50px; } /* ছবিটি ব্যানারের সাথে লাগাতে নেগেটিভ মার্জিন */
+.profile-img { width: 100%; max-width: 450px; display: block; filter: drop-shadow(0 0 30px rgba(138, 99, 255, 0.2)); }
+.main-glow { position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(138, 99, 255, 0.2) 0%, transparent 70%); bottom: 0; right: 0; }
+
+.floating-glass-card {
+    position: absolute; bottom: 100px; right: 0; z-index: 10;
     background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px);
-    padding: 12px 20px; border-radius: 15px; display: flex; align-items: center; gap: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    padding: 10px 18px; border-radius: 12px; display: flex; align-items: center; gap: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.check-box { background: #8a63ff; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; }
+.check-box { background: #8a63ff; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; }
+.glass-content h4 { font-size: 13px; color: white; }
+.glass-content p { font-size: 10px; color: #ccc; }
 
-/* মাঝখানের কালো ব্যানার (Pixel-Perfect Position) */
-.divider-section { position: relative; z-index: 20; height: 0; }
-.black-stats-bar { 
-    background: #0b0b1a; 
-    padding: 25px 40px; 
-    border-radius: 20px; 
-    display: flex; 
-    justify-content: space-around; 
-    border: 1px solid rgba(138, 99, 255, 0.1);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+/* চিকন ব্যানার */
+.stats-divider { position: relative; z-index: 20; height: 0; }
+.slim-stats-bar { 
+    background: #0b0b1a; padding: 15px 30px; border-radius: 50px; display: flex; justify-content: space-around; 
+    border: 1px solid rgba(138, 99, 255, 0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     transform: translateY(-50%);
 }
-.stat-item { display: flex; align-items: center; gap: 15px; }
-.stat-item i { font-size: 24px; color: #8a63ff; opacity: 0.8; }
-.stat-item strong { font-size: 20px; display: block; color: white; }
-.stat-item p { font-size: 12px; color: #777; margin-top: 2px; }
+.ms-item { display: flex; align-items: center; gap: 8px; font-size: 12px; }
+.ms-item i { color: #8a63ff; font-size: 18px; }
 
-/* কোর্স সেকশন (সাদা ব্যাকগ্রাউন্ড) */
-.popular-courses { background: white; padding: 120px 0 80px; color: #333; }
-.title-center { text-align: center; margin-bottom: 50px; }
-.title-center h2 { font-size: 38px; color: #050510; margin-bottom: 10px; }
-.title-center p { color: #777; font-size: 14px; }
+/* কোর্স সেকশন */
+.white-courses-section { background: white; padding: 100px 0 60px; color: #333; }
+.title-center { text-align: center; margin-bottom: 40px; }
+.course-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+.course-link img { width: 100%; border-radius: 15px; display: block; box-shadow: 0 10px 25px rgba(0,0,0,0.08); transition: 0.3s; }
+.course-link img:hover { transform: translateY(-5px); }
 
-.course-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-.course-card { position: relative; border-radius: 20px; overflow: hidden; display: block; box-shadow: 0 15px 35px rgba(0,0,0,0.08); }
-.course-card img { width: 100%; display: block; }
-
-/* এনরোল বাটন (ট্রান্সপারেন্ট গ্লাস) */
-.glass-enroll {
-    position: absolute; bottom: 25px; right: 25px;
-    background: rgba(108, 92, 231, 0.7); backdrop-filter: blur(8px);
-    color: white; padding: 8px 18px; border-radius: 10px;
-    text-decoration: none; font-size: 13px; font-weight: 700;
-}
-
-.view-all-btn-wrapper { text-align: center; margin-top: 50px; }
-.view-all-btn { background: #6c5ce7; color: white; padding: 12px 30px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 14px; display: inline-block; }
-
-/* মোবাইল ফিক্স (আপনার ছবি উপরে থাকবে) */
+/* মোবাইল রেসপন্সিভ - জুম ও লেআউট ঠিক করা */
 @media (max-width: 768px) {
-    .hero-wrapper { flex-direction: column-reverse; align-items: center; }
-    .hero-text { text-align: center; margin-top: 40px; }
-    .hero-text h1 { font-size: 38px; }
-    .hero-btns, .social-follow { justify-content: center; }
-    .black-stats-bar { width: 95%; padding: 20px; border-radius: 15px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-    .course-grid { grid-template-columns: repeat(2, 1fr); }
-    nav, .btn-top { display: none; }
-}
+    /* মোবাইল মেনু একটিভ */
+    .mobile-menu-icon { display: block; }
+    nav { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: #0b0b1a; padding: 20px; border-bottom: 2px solid #8a63ff; }
+    nav.active { display: block; }
+    nav ul { flex-direction: column; gap: 10px; text-align: center; }
+    .nav-btn { font-size: 16px; display: block; width: 100%; }
 
-@keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes fadeInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
-@keyframes fadeInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
+    /* হিরো লেআউট */
+    .hero-wrapper { flex-direction: column-reverse; align-items: center; padding-top: 30px; }
+    .hero-text { text-align: center; margin-top: 30px; width: 100%; }
+    .hero-text h1 { font-size: 32px; }
+    .social-follow { justify-content: center; }
+    
+    .hero-image-area { margin-bottom: -20px; } /* মোবাইলে একটু কম মার্জিন */
+    .profile-img { max-width: 100%; }
+    .floating-glass-card { display: none; } /* জ্যাম কমাতে হাইড */
+
+    /* চিকন ব্যানার */
+    .slim-stats-bar { width: 100%; border-radius: 15px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 20px; }
+    
+    /* কোর্স গ্রিড */
+    .course-row { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+}
