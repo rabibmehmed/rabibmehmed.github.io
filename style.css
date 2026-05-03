@@ -87,3 +87,38 @@ nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
     .mid-status-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; transform: translateY(-40px); margin: 0 10px; }
     .course-grid { grid-template-columns: 1fr 1fr; padding: 0 10px; }
 }
+/* --- শুধুমাত্র মোবাইলের প্রোফাইল ছবি এবং কার্ড ফিক্স --- */
+@media (max-width: 768px) {
+    /* ছবিটিকে নিচের লেখার সাথে লাগিয়ে দেওয়ার জন্য */
+    .hero-image-area {
+        margin-bottom: -15px !important; /* নেগেটিভ মার্জিন দিয়ে লেখার সাথে লাগানো হয়েছে */
+        padding-bottom: 0px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* প্রোফাইল ছবিটির সাইজ এবং পজিশন */
+    .profile-img {
+        max-width: 320px !important; /* আপনার ছবির সাইজ অনুযায়ী অ্যাডজাস্ট করতে পারেন */
+        margin-bottom: 0 !important;
+        display: block !important;
+    }
+
+    /* ছবির ওপরের গ্লাস কার্ডটি নিচে নামানোর জন্য */
+    .floating-glass-card {
+        position: relative !important;
+        bottom: 50px !important; /* কার্ডটি ছবির একটু নিচে নামানো হয়েছে যেন মুখের ওপর না থাকে */
+        margin: 0 auto !important;
+        width: 85% !important;
+        right: auto !important;
+        left: auto !important;
+        transform: none !important;
+        z-index: 20 !important;
+    }
+
+    /* নিচের টেক্সট এরিয়া গ্যাপ ঠিক করা */
+    .hero-text {
+        padding-top: 0px !important; /* ছবির সাথে গ্যাপ কমানোর জন্য */
+    }
+}
