@@ -78,7 +78,7 @@
         <div class="container">
             <div class="title-head">
                 <span class="sub-title">MY COURSES</span>
-                <h2>Popular Courses</h2>
+                <h2>Enroll Now</h2>
             </div>
             <div class="course-grid">
                 <div class="course-item">
@@ -102,7 +102,6 @@
     </section>
 
     <script>
-        // মোবাইল মেনু স্ক্রিপ্ট
         const menuBtn = document.getElementById('mobileMenuBtn');
         const navMenu = document.getElementById('navMenu');
         menuBtn.addEventListener('click', () => { 
@@ -110,13 +109,9 @@
             menuBtn.querySelector('i').classList.toggle('fa-bars');
             menuBtn.querySelector('i').classList.toggle('fa-times');
         });
-
-        // ইমেজ ডাউনলোড প্রোটেকশন (Right Click Disable)
-        document.addEventListener('contextmenu', function(e) {
-            if (e.target.nodeName === 'IMG') {
-                e.preventDefault();
-            }
-        }, false);
+    </script>
+</body>
+</html>
     </script>
 </body>
 </html>
