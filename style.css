@@ -4,6 +4,7 @@
 body { font-family: 'Poppins', sans-serif; background: #050510; color: white; overflow-x: hidden; }
 .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
+/* হেডার */
 header { padding: 20px 0; background: #050510; position: relative; z-index: 1000; }
 .nav-bar { display: flex; justify-content: space-between; align-items: center; }
 .logo { font-size: 24px; font-weight: 700; color: white; }
@@ -13,6 +14,7 @@ nav ul { display: flex; list-style: none; gap: 15px; }
 .nav-btn:hover { background: rgba(138, 99, 255, 0.1); color: #8a63ff; }
 .mobile-menu-icon { display: none; color: white; font-size: 26px; cursor: pointer; z-index: 2100; }
 
+/* হিরো সেকশন */
 .hero-section { min-height: 80vh; display: flex; align-items: flex-end; padding-bottom: 60px; position: relative; background: #050510; }
 .hero-wrapper { display: flex; align-items: flex-end; justify-content: space-between; width: 100%; }
 .hero-text { flex: 1; padding-bottom: 50px; }
@@ -20,19 +22,19 @@ nav ul { display: flex; list-style: none; gap: 15px; }
 .hero-text h1 span { color: #8a63ff; }
 .hero-text p { color: #aaa; font-size: 16px; max-width: 460px; margin-bottom: 30px; }
 
+/* সোশ্যাল আইকন হোভার ইফেক্ট */
 .social-follow { display: flex; align-items: center; gap: 15px; margin-top: 10px; }
 .social-icons { display: flex; gap: 12px; }
 .si-glass { background: rgba(255, 255, 255, 0.1); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-
-/* আইকন হোভার করলে উপরে উঠে আসবে */
 .si-glass:hover { background: #8a63ff; transform: translateY(-12px); box-shadow: 0 10px 20px rgba(138, 99, 255, 0.3); }
 
+/* ইমেজ এরিয়া */
 .hero-image-area { position: relative; margin-bottom: -60px; z-index: 5; }
 .profile-img { width: 100%; max-width: 500px; display: block; filter: drop-shadow(0 0 30px rgba(138, 99, 255, 0.2)); }
 .floating-glass-card { position: absolute; bottom: 130px; right: 0; z-index: 10; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); padding: 12px 18px; border-radius: 15px; display: flex; align-items: center; gap: 10px; border: 1px solid rgba(255, 255, 255, 0.1); }
 .check-box { background: #8a63ff; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; }
 
-/* ব্যানার সেন্টারিং ফিক্স */
+/* ব্যানার সেন্টারিং */
 .divider-section { position: relative; z-index: 50; height: 0; }
 .mid-status-bar { 
     background: #0b0b1a; padding: 25px 40px; border-radius: 60px; display: flex; justify-content: space-around; 
@@ -44,13 +46,14 @@ nav ul { display: flex; list-style: none; gap: 15px; }
 .st-box strong { font-size: 19px; display: block; }
 .st-box p { font-size: 12px; color: #777; margin: 0; }
 
+/* হোয়াইট সেকশন */
 .white-section { background: white; padding: 120px 0 80px; color: #333; position: relative; z-index: 1; }
 .title-head { text-align: center; margin-bottom: 50px; }
 .course-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
 .course-card img { width: 100%; border-radius: 20px; transition: 0.3s; }
 .course-card:hover img { transform: translateY(-10px); }
 
-/* অ্যানিমেশনগুলো */
+/* অ্যানিমেশন কোড */
 .anim-slide-left { opacity: 0; transform: translateX(-100px); animation: slideIn 1s forwards; }
 .anim-slide-left-simple { opacity: 0; transform: translateX(-30px); animation: slideIn 0.8s forwards; animation-delay: 0.7s; }
 .anim-slide-up { opacity: 0; transform: translateY(150px); animation: slideInUp 1.2s forwards; }
@@ -73,24 +76,52 @@ nav ul { display: flex; list-style: none; gap: 15px; }
 @keyframes socialSlide { to { opacity: 1; transform: translateX(0); } }
 @keyframes bannerIn { to { opacity: 1; transform: translate(-50%, -50%) scale(1); } }
 
-/* মোবাইল ফিক্স */
+/* মোবাইল রেসপন্সিভ ফিক্স */
 @media (max-width: 768px) {
     .mobile-menu-icon { display: block; }
+    
+    /* মেনুবার গ্লাস ব্যাকগ্রাউন্ড */
     nav { 
         display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
-        background: rgba(5, 5, 16, 0.5); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
+        background: rgba(255, 255, 255, 0.1); /* সাদাটে ট্রান্সপারেন্ট */
+        backdrop-filter: blur(20px); /* ঝাপসা ব্যাকগ্রাউন্ড */
+        -webkit-backdrop-filter: blur(20px);
         z-index: 2000; flex-direction: column; justify-content: center; align-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
     nav.active { display: flex; }
     nav ul { flex-direction: column; gap: 25px; }
     .nav-btn { font-size: 19px; font-weight: 700; color: white; }
 
-    .hero-wrapper { flex-direction: column; align-items: center; } /* ছবি উপরে, লেখা নিচে */
-    .hero-image-area { order: 1; margin-top: 10px; margin-bottom: 20px; }
-    .hero-text { order: 2; text-align: center; padding-bottom: 80px; }
-    .hero-text h1 { font-size: 32px; }
-    .social-follow { justify-content: center; flex-direction: column; }
-    .mid-status-bar { width: 90%; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; border-radius: 20px; padding: 20px; transform: translate(-50%, -50%); }
-    .course-grid { grid-template-columns: repeat(2, 1fr); }
+    /* নামের পজিশন ও লেআউট ফিক্স */
+    .hero-wrapper { flex-direction: column; align-items: center; } 
+    .hero-image-area { 
+        order: 1; /* ছবি আগে দেখাবে */
+        margin-top: 10px; 
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
     .profile-img { max-width: 280px; }
+
+    /* নাম এবং টেক্সট এখন ছবির নিচে থাকবে (আপনার হাতের কাছে) */
+    .hero-text { 
+        order: 2; 
+        text-align: center; 
+        padding-bottom: 100px; 
+    }
+    .hero-text h1 { font-size: 32px; }
+
+    /* ব্যানার ফিক্স */
+    .mid-status-bar { 
+        width: 90%; 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 15px; 
+        border-radius: 20px; 
+        padding: 20px; 
+        transform: translate(-50%, -50%); 
+    }
+    .course-grid { grid-template-columns: repeat(2, 1fr); }
 }
