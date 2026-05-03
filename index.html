@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Rabib Mehmed | 100% Final Fix</title>
+    <title>Rabib Mehmed | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -34,13 +34,13 @@
                 <p class="anim-zoom-in delay-1">Practical Digital Skills & Freelancing Courses Designed to Help You Build Freedom & Income.</p>
                 
                 <div class="social-follow">
-                    <span class="follow-text anim-slide-left delay-2">Follow Me:</span>
+                    <span class="follow-text anim-slide-left-simple">Follow Me:</span>
                     <div class="social-icons">
-                        <a href="#" class="si-glass icon-anim-1"><i class="fab fa-youtube"></i></a>
-                        <a href="#" class="si-glass icon-anim-2"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="si-glass icon-anim-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="si-glass icon-anim-4"><i class="fab fa-telegram-plane"></i></a>
-                        <a href="#" class="si-glass icon-anim-5"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="si-glass icon-youtube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="si-glass icon-facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="si-glass icon-instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="si-glass icon-telegram"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="#" class="si-glass icon-tiktok"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@
             <div class="hero-image-area">
                 <div class="main-glow"></div>
                 <img src="profile.png" alt="Rabib Mehmed" class="profile-img anim-slide-up">
-                <div class="floating-glass-card anim-zoom-in delay-3">
+                <div class="floating-glass-card anim-zoom-in-card">
                     <div class="check-box">✔</div>
                     <div class="glass-content">
                         <h4>Rabib Mehmed</h4>
@@ -59,9 +59,9 @@
         </div>
     </main>
 
-    <div class="divider-wrapper">
+    <div class="divider-section">
         <div class="container">
-            <div class="mid-status-bar anim-zoom-in delay-3">
+            <div class="mid-status-bar anim-banner-zoom">
                 <div class="st-box"><i class="fas fa-user-graduate"></i> <div><strong>1,200+</strong><p>Students Enrolled</p></div></div>
                 <div class="st-box"><i class="fas fa-play-circle"></i> <div><strong>15+</strong><p>Premium Courses</p></div></div>
                 <div class="st-box"><i class="fas fa-star"></i> <div><strong>4.9/5</strong><p>Average Rating</p></div></div>
@@ -91,9 +91,8 @@
         menuBtn.addEventListener('click', () => { 
             navMenu.classList.toggle('active');
             menuBtn.querySelector('i').classList.toggle('fa-bars');
-            menuBtn.querySelector('i').classList.toggle('fa-times'); // ক্লোজ বাটন ইফেক্ট
+            menuBtn.querySelector('i').classList.toggle('fa-times');
         });
     </script>
-
 </body>
 </html>
