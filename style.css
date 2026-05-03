@@ -9,24 +9,21 @@ header { padding: 20px 0; background: #050510; position: relative; z-index: 1000
 .nav-bar { display: flex; justify-content: space-between; align-items: center; }
 .logo { font-size: 24px; font-weight: 700; color: white; }
 .accent { color: #8a63ff; }
-
-/* ডেস্কটপ মেনু */
-nav ul { display: flex; list-style: none; gap: 20px; }
-.nav-btn { color: #ccc; text-decoration: none; font-size: 14px; font-weight: 500; transition: 0.3s; padding: 8px 15px; border-radius: 8px; }
+nav ul { display: flex; list-style: none; gap: 15px; }
+.nav-btn { color: #ccc; text-decoration: none; font-size: 13px; font-weight: 500; transition: 0.3s; padding: 8px 12px; border-radius: 8px; }
 .nav-btn:hover { background: rgba(138, 99, 255, 0.1); color: #8a63ff; }
-
 .mobile-menu-icon { display: none; color: white; font-size: 26px; cursor: pointer; z-index: 1100; }
 
 /* হিরো সেকশন */
 .hero-section { min-height: 80vh; display: flex; align-items: flex-end; padding-bottom: 60px; position: relative; background: #050510; }
 .hero-wrapper { display: flex; align-items: flex-end; justify-content: space-between; width: 100%; }
-.hero-text { flex: 1; padding-bottom: 40px; z-index: 2; }
-.hero-text h1 { font-size: 58px; line-height: 1.1; margin-bottom: 25px; font-weight: 800; }
+.hero-text { flex: 1; padding-bottom: 50px; }
+.hero-text h1 { font-size: 58px; line-height: 1.1; margin-bottom: 20px; font-weight: 800; }
 .hero-text h1 span { color: #8a63ff; }
-.hero-text p { color: #aaa; font-size: 16px; max-width: 480px; margin-bottom: 35px; }
+.hero-text p { color: #aaa; font-size: 16px; max-width: 460px; margin-bottom: 30px; }
 
-/* সোশ্যাল এন্ট্রান্স ইফেক্ট */
-.social-follow { display: flex; align-items: center; gap: 15px; overflow: visible; }
+/* সোশ্যাল আইকন (একটির পর একটি আসবে) */
+.social-follow { display: flex; align-items: center; gap: 15px; margin-top: 10px; }
 .social-icons { display: flex; gap: 12px; }
 .si-glass { background: rgba(255, 255, 255, 0.1); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: 0.3s; }
 .si-glass:hover { background: #8a63ff; transform: translateY(-5px); }
@@ -34,96 +31,70 @@ nav ul { display: flex; list-style: none; gap: 20px; }
 /* ইমেজ এরিয়া */
 .hero-image-area { position: relative; margin-bottom: -60px; z-index: 5; }
 .profile-img { width: 100%; max-width: 500px; display: block; filter: drop-shadow(0 0 30px rgba(138, 99, 255, 0.2)); }
-.main-glow { position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(138, 99, 255, 0.15) 0%, transparent 70%); bottom: 0; right: 0; }
-
-.floating-glass-card {
-    position: absolute; bottom: 130px; right: 0; z-index: 10;
-    background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px);
-    padding: 12px 20px; border-radius: 15px; display: flex; align-items: center; gap: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
+.floating-glass-card { position: absolute; bottom: 130px; right: 0; z-index: 10; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); padding: 12px 18px; border-radius: 15px; display: flex; align-items: center; gap: 10px; border: 1px solid rgba(255, 255, 255, 0.1); }
 .check-box { background: #8a63ff; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; }
 
-/* --- ব্যানার পজিশন ফিক্স (মাঝখানে) --- */
-.divider-wrapper { position: relative; z-index: 20; height: 0; width: 100%; }
+/* --- ব্যানার পজিশন (সাদা ও কালোর ঠিক মাঝখানে) --- */
+.divider-section { position: relative; z-index: 50; height: 0; }
 .mid-status-bar { 
-    background: #0b0b1a; padding: 30px 45px; border-radius: 60px; display: flex; justify-content: space-around; 
-    border: 1px solid rgba(138, 99, 255, 0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-    transform: translateY(-50%); /* হিরো এবং হোয়াইট সেকশনের ঠিক মাঝখানে */
+    background: #0b0b1a; padding: 25px 40px; border-radius: 60px; display: flex; justify-content: space-around; 
+    border: 1px solid rgba(138, 99, 255, 0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    transform: translateY(-50%); /* হিরো সেকশন এবং হোয়াইট সেকশনের ঠিক মাঝখানে পজিশন */
+    position: absolute; width: calc(100% - 40px); left: 20px; margin: 0 auto; max-width: 1160px;
 }
-.st-box { display: flex; align-items: center; gap: 12px; }
+.st-box { display: flex; align-items: center; gap: 10px; }
 .st-box i { color: #8a63ff; font-size: 24px; }
-.st-box strong { font-size: 20px; color: white; }
-.st-box p { font-size: 13px; color: #777; margin: 0; }
+.st-box strong { font-size: 19px; display: block; }
+.st-box p { font-size: 12px; color: #777; margin: 0; }
 
 /* হোয়াইট সেকশন */
 .white-section { background: white; padding: 120px 0 80px; color: #333; position: relative; z-index: 1; }
 .title-head { text-align: center; margin-bottom: 50px; }
-.course-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-.course-card img { width: 100%; border-radius: 20px; display: block; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; }
+.course-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+.course-card img { width: 100%; border-radius: 20px; transition: 0.3s; }
 .course-card:hover img { transform: translateY(-10px); }
 
-/* --- এনিমেশন কোড --- */
+/* --- সব অ্যানিমেশন ইফেক্টস --- */
+.anim-slide-left { opacity: 0; transform: translateX(-100px); animation: slideIn 1s forwards; }
+.anim-slide-left-simple { opacity: 0; transform: translateX(-30px); animation: slideIn 0.8s forwards; animation-delay: 0.7s; }
+.anim-slide-up { opacity: 0; transform: translateY(150px); animation: slideInUp 1.2s forwards; }
+.anim-zoom-in { opacity: 0; transform: scale(0.6); animation: zoomIn 0.8s forwards; }
+.anim-zoom-in-card { opacity: 0; transform: scale(0.6); animation: zoomIn 0.8s forwards; animation-delay: 1s; }
+.anim-banner-zoom { opacity: 0; transform: translateY(-50%) scale(0.8); animation: bannerIn 0.8s forwards; animation-delay: 0.5s; }
+.anim-fade-in { opacity: 0; animation: fadeIn 1s forwards; }
 
-/* ফলো মি বাম দিক থেকে */
-.follow-text.anim-slide-left {
-    display: inline-block;
-    opacity: 0;
-    transform: translateX(-50px);
-    animation: slideInLeft 0.8s ease-out forwards;
-}
+/* সোশ্যাল আইকন সিকোয়েন্স অ্যানিমেশন */
+.social-icons a { opacity: 0; transform: translateX(-100vw); animation: socialSlide 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+.icon-youtube { animation-delay: 1.0s; }
+.icon-facebook { animation-delay: 1.3s; }
+.icon-instagram { animation-delay: 1.6s; }
+.icon-telegram { animation-delay: 1.9s; }
+.icon-tiktok { animation-delay: 2.2s; }
 
-/* সোশ্যাল আইকন একটার পর একটা বাহির থেকে আসবে */
-.social-icons a { opacity: 0; transform: translateX(-100vw); animation: socialSlideIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
-.icon-anim-1 { animation-delay: 0.8s; }
-.icon-anim-2 { animation-delay: 1.0s; }
-.icon-anim-3 { animation-delay: 1.2s; }
-.icon-anim-4 { animation-delay: 1.4s; }
-.icon-anim-5 { animation-delay: 1.6s; }
-
-@keyframes socialSlideIn { to { opacity: 1; transform: translateX(0); } }
-
-/* অন্যান্য এনিমেশন */
-.anim-slide-left { opacity: 0; transform: translateX(-100px); animation: slideInLeft 1s ease-out forwards; }
-.anim-slide-up { opacity: 0; transform: translateY(150px); animation: slideInUp 1.2s ease-out forwards; }
-.anim-zoom-in { opacity: 0; transform: scale(0.5); animation: zoomIn 0.8s ease-out forwards; }
-.anim-fade-in { opacity: 0; animation: fadeIn 1s ease-in forwards; }
-
-.delay-1 { animation-delay: 0.3s; }
-.delay-2 { animation-delay: 0.6s; }
-.delay-3 { animation-delay: 0.9s; }
-
-@keyframes slideInLeft { to { opacity: 1; transform: translateX(0); } }
+@keyframes slideIn { to { opacity: 1; transform: translateX(0); } }
 @keyframes slideInUp { to { opacity: 1; transform: translateY(0); } }
 @keyframes zoomIn { to { opacity: 1; transform: scale(1); } }
 @keyframes fadeIn { to { opacity: 1; } }
+@keyframes socialSlide { to { opacity: 1; transform: translateX(0); } }
+@keyframes bannerIn { to { opacity: 1; transform: translateY(-50%) scale(1); } }
 
-/* --- মোবাইল মেনু (Transparent & Blur) --- */
+/* --- মোবাইল মেনু (Transparent Blur) --- */
 @media (max-width: 768px) {
     .mobile-menu-icon { display: block; }
-    
     nav { 
         display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
-        background: rgba(5, 5, 16, 0.6); /* Transparent background */
-        backdrop-filter: blur(15px); /* Background Blur */
-        -webkit-backdrop-filter: blur(15px);
-        z-index: 1000;
-        justify-content: center;
-        align-items: center;
+        background: rgba(5, 5, 16, 0.7); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        z-index: 1000; flex-direction: column; justify-content: center; align-items: center;
     }
-    nav.active { display: flex; animation: fadeIn 0.4s ease; }
-    nav ul { flex-direction: column; gap: 30px; text-align: center; }
-    .nav-btn { font-size: 24px; font-weight: 600; color: white; }
+    nav.active { display: flex; }
+    nav ul { flex-direction: column; gap: 30px; }
+    .nav-btn { font-size: 24px; font-weight: 700; color: white; }
 
-    .hero-section { padding-bottom: 120px; }
     .hero-wrapper { flex-direction: column-reverse; align-items: center; }
     .hero-text { text-align: center; margin-top: 50px; }
     .hero-text h1 { font-size: 36px; }
     .social-follow { justify-content: center; flex-direction: column; }
     
-    .hero-image-area { margin-bottom: -30px; width: 100%; display: flex; justify-content: center; }
-    .profile-img { max-width: 100%; }
-    
-    .mid-status-bar { width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; border-radius: 20px; padding: 25px; transform: translateY(-50%); }
-    .course-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+    .mid-status-bar { width: 90%; left: 5%; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; border-radius: 20px; padding: 20px; transform: translateY(-50%); }
+    .course-grid { grid-template-columns: repeat(2, 1fr); }
 }
