@@ -1,108 +1,144 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Rabib Mehmed | Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-    <header class="animate__animated animate__fadeInDown">
-        <div class="container nav-bar">
-            <div class="logo animate__animated animate__slideInLeft">Rabib <span class="accent">Mehmed</span></div>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Courses</a></li>
-                    <li><a href="#">Reviews</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">CONTACT US</a></li>
-                </ul>
-            </nav>
-            <a href="https://t.me/rabibmehmed" target="_blank" class="btn-top click-effect">Get Started 🚀</a>
-        </div>
-    </header>
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-    <main class="hero-section">
-        <div class="container hero-wrapper">
-            <div class="hero-text animate__animated animate__fadeInUp">
-                <div class="badge">Welcome to <strong>My Learning Platform</strong> 👋</div>
-                <h1>Learn. Apply.<br>Earn <span>Online.</span></h1>
-                <p>Practical Digital Skills & Freelancing Courses Designed to Help You Build Freedom & Income.</p>
-                <div class="hero-btns">
-                    <a href="#" class="btn-browse click-effect"><i class="fas fa-rocket"></i> Browse Courses</a>
-                    <a href="#" class="btn-about click-effect"><i class="fas fa-user"></i> About Me</a>
-                </div>
-                <div class="social-follow">
-                    <span>Follow Me:</span>
-                    <a href="https://www.youtube.com/@rabibmehmed" target="_blank" class="social-icon yt click-effect"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.facebook.com/rabibmehmed" target="_blank" class="social-icon fb click-effect"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/rabibmehmed" target="_blank" class="social-icon ig click-effect"><i class="fab fa-instagram"></i></a>
-                    <a href="https://t.me/rabibmehmed" target="_blank" class="social-icon tg click-effect"><i class="fab fa-telegram-plane"></i></a>
-                    <a href="https://www.tiktok.com/@rabibmehmed" target="_blank" class="social-icon tk click-effect"><i class="fab fa-tiktok"></i></a>
-                </div>
-            </div>
-            
-            <div class="hero-image-area animate__animated animate__zoomIn">
-                <div class="main-glow"></div>
-                <img src="profile.png" alt="Rabib Mehmed" class="profile-img">
-                <div class="floating-card animate__animated animate__fadeInRight animate__delay-1s">
-                    <div class="check-icon">✔</div>
-                    <div class="card-info">
-                        <h4>Rabib Mehmed</h4>
-                        <p>Freelancer • Course Creator</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #050510;
+    color: white;
+    overflow-x: hidden;
+    width: 100%;
+}
 
-    <div class="stats-wrapper animate__animated animate__fadeInUp animate__delay-1s">
-        <div class="container">
-            <div class="stats-strip floating-element">
-                <div class="s-item"><i class="fas fa-user-graduate"></i> <div><strong>1,200+</strong><p>Students</p></div></div>
-                <div class="s-item"><i class="fas fa-play-circle"></i> <div><strong>1+</strong><p>Master Course</p></div></div>
-                <div class="s-item"><i class="fas fa-star"></i> <div><strong>4.9/5</strong><p>Rating</p></div></div>
-                <div class="s-item"><i class="fas fa-users"></i> <div><strong>100%</strong><p>Satisfaction</p></div></div>
-            </div>
-        </div>
-    </div>
+.container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-    <section class="bottom-section">
-        <div class="container">
-            <div class="title-center animate__animated animate__fadeIn">
-                <span>MY COURSES</span>
-                <h2>Popular Courses</h2>
-            </div>
-            <div class="content-split">
-                <div class="course-container">
-                    <a href="checkout.html" class="banner-box click-effect">
-                        <img src="course_banner.png" alt="Master Course">
-                        <div class="enroll-btn">Enroll Now</div>
-                    </a>
-                </div>
+/* --- বাটন ও কার্ড লিফট ইফেক্ট --- */
+.bounce-btn:active, .social-icon:active, .channel-card-lift:active {
+    transform: scale(0.95);
+}
 
-                <div class="channel-list">
-                    <a href="https://www.youtube.com/@rabibmehmed" target="_blank" class="channel-card click-effect">
-                        <i class="fab fa-youtube yt-icon"></i>
-                        <div class="ch-text"><h4>My YouTube Channel</h4><p>Subscribers: 15K+</p></div>
-                    </a>
-                    <a href="https://www.facebook.com/rabibmehmed" target="_blank" class="channel-card click-effect">
-                        <i class="fab fa-facebook fb-icon"></i>
-                        <div class="ch-text"><h4>My Facebook Account</h4><p>Followers: 10K+</p></div>
-                    </a>
-                    <a href="https://t.me/rabibmehmed" target="_blank" class="channel-card click-effect">
-                        <i class="fab fa-telegram tg-icon"></i>
-                        <div class="ch-text"><h4>My Telegram Channel</h4><p>Members: 8K+</p></div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+.yt-float:hover, .fb-float:hover, .ig-float:hover, .tg-float:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(138, 99, 255, 0.4);
+    background: #8a63ff !important;
+}
 
-</body>
-</html>
+.channel-card-lift {
+    display: flex; align-items: center; gap: 15px; padding: 18px; 
+    background: #fff; border: 1px solid #eee; border-radius: 15px; 
+    text-decoration: none; color: #333; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+
+.channel-card-lift:hover {
+    transform: translateY(-12px); /* উপরের দিকে উঠে আসবে */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* --- লোডিং অ্যানিমেশন --- */
+@keyframes slideFromLeft { from { transform: translateX(-100px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+@keyframes fadeInUpCustom { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+.logo-anim { animation: slideFromLeft 1s ease-out; }
+.text-load-anim { animation: fadeInUpCustom 1s ease-out; }
+.img-fade-anim { animation: fadeIn 1.5s ease-in; }
+.stats-anim { animation: fadeInUpCustom 1s ease-out 0.5s both; }
+
+/* --- হেডার ও হিরো --- */
+header { padding: 20px 0; background: #050510; }
+.nav-bar { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 24px; font-weight: 700; }
+.accent { color: #8a63ff; }
+nav ul { display: flex; list-style: none; gap: 20px; }
+nav ul li a { color: #ccc; text-decoration: none; font-size: 14px; transition: 0.3s; }
+.btn-top { background: #6c5ce7; padding: 10px 20px; border-radius: 8px; color: white; text-decoration: none; font-size: 13px; font-weight: 600; }
+
+.hero-section { min-height: 70vh; display: flex; align-items: flex-end; padding-bottom: 50px; }
+.hero-wrapper { display: flex; align-items: flex-end; justify-content: space-between; width: 100%; }
+
+.hero-text h1 { font-size: 55px; line-height: 1.1; margin-bottom: 20px; font-weight: 800; }
+.hero-text h1 span { color: #8a63ff; }
+.hero-text p { color: #aaa; font-size: 15px; max-width: 450px; margin-bottom: 30px; }
+
+.hero-btns { display: flex; gap: 15px; margin-bottom: 30px; }
+.btn-browse { background: #6c5ce7; padding: 14px 25px; border-radius: 10px; color: white; text-decoration: none; font-size: 15px; font-weight: 600; }
+.btn-about { border: 1px solid #333; padding: 14px 25px; border-radius: 10px; color: white; text-decoration: none; font-size: 15px; }
+
+.social-follow { display: flex; align-items: center; gap: 15px; }
+.social-icon { background: #1a1a3a; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 16px; transition: 0.4s; }
+
+/* প্রোফাইল ইমেজ */
+.hero-image-area { position: relative; display: flex; justify-content: flex-end; }
+.profile-img { width: 100%; max-width: 480px; z-index: 2; display: block; filter: drop-shadow(0 0 20px rgba(138, 99, 255, 0.2)); }
+.main-glow { position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(138, 99, 255, 0.3) 0%, transparent 70%); bottom: 0; right: 0; }
+
+.floating-card {
+    position: absolute; bottom: 100px; right: 0; z-index: 3;
+    background: rgba(20, 20, 40, 0.9); backdrop-filter: blur(10px);
+    padding: 12px 20px; border-radius: 15px; display: flex; align-items: center; gap: 12px;
+    border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* --- ভাসমান স্ট্যাটাস ব্যানার (সাদা-কালোর মাঝে) --- */
+.stats-outer { position: relative; z-index: 20; height: 0; } /* উচ্চতা ০ করা হয়েছে যাতে সাদা অংশে ঝুলে থাকে */
+.stats-strip { 
+    background: #0b0b1a; 
+    padding: 30px; 
+    border-radius: 20px; 
+    display: flex; 
+    justify-content: space-around; 
+    border: 1px solid #1a1a3a;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    transform: translateY(-50%); /* একদম ঠিক মাঝখানে ভাসমান রাখবে */
+}
+.s-item { display: flex; align-items: center; gap: 12px; }
+.s-item i { font-size: 24px; color: #8a63ff; }
+.s-item strong { font-size: 20px; color: white; display: block; }
+.s-item p { font-size: 12px; color: #777; margin: 0; }
+
+/* Bottom Section */
+.bottom-section { background: white; padding: 100px 0 60px; color: #333; }
+.title-center { text-align: center; margin-bottom: 50px; }
+.title-center h2 { font-size: 35px; color: #050510; }
+
+.content-split { display: flex; gap: 40px; align-items: flex-start; }
+
+/* কোর্স ও ভাসমান বাটন */
+.course-container { flex: 1.4; }
+.banner-link-box { position: relative; display: block; border-radius: 25px; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.1); transition: 0.4s; }
+.banner-link-box:hover { transform: scale(1.02); }
+.banner-link-box img { width: 100%; display: block; }
+
+.enroll-btn-floating {
+    position: absolute; bottom: 30px; right: 30px;
+    background: #6c5ce7; color: white; padding: 16px 35px;
+    border-radius: 15px; font-weight: 800; font-size: 18px;
+    box-shadow: 0 10px 25px rgba(108, 92, 231, 0.5);
+}
+
+.channel-list { flex: 1; display: flex; flex-direction: column; gap: 20px; }
+.yt-icon { color: #ff0000; } .fb-icon { color: #1877f2; } .tg-icon { color: #0088cc; }
+
+/* --- মোবাইল রেসপন্সিভ (নিখুঁত ফিক্স) --- */
+@media (max-width: 768px) {
+    .container { padding: 0 15px; }
+    .hero-section { min-height: auto; padding-top: 40px; padding-bottom: 120px; }
+    .hero-wrapper { flex-direction: column-reverse; align-items: center; }
+    .hero-text { text-align: center; width: 100%; margin-top: 40px; }
+    .hero-text h1 { font-size: 38px; }
+    .hero-btns, .social-follow { justify-content: center; }
+    
+    .profile-img { max-width: 100%; height: auto; }
+    .floating-card { display: none; } /* মোবাইলে জ্যাম কমাতে হাইড */
+
+    .stats-strip { 
+        display: grid; grid-template-columns: 1fr 1fr; gap: 20px; 
+        padding: 20px; width: 95%; margin: 0 auto;
+    }
+    .s-item strong { font-size: 16px; }
+
+    .content-split { flex-direction: column; gap: 30px; }
+    .enroll-btn-floating { padding: 12px 22px; font-size: 14px; bottom: 15px; right: 15px; }
+    
+    nav, .btn-top { display: none; }
+}
