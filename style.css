@@ -65,7 +65,7 @@ nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
 }
 .course-card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
 
-/* --- Mobile Optimised (সংশোধিত গ্যাপ ফিক্স) --- */
+/* --- Mobile Optimised (সংশোধিত স্লিম গ্লাস কার্ড) --- */
 @media (max-width: 768px) {
     header { padding: 15px 0; background: #050510; position: fixed; }
     .mobile-menu-icon { display: block; }
@@ -78,7 +78,7 @@ nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
     
     .hero-image-area { 
         order: 1 !important; 
-        margin-bottom: -50px !important; /* গ্যাপ কমানোর জন্য মার্জিন আরও কমানো হয়েছে */
+        margin-bottom: -50px !important; 
         justify-content: center; 
         display: flex; 
         flex-direction: column; 
@@ -88,19 +88,36 @@ nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
     
     .floating-glass-card { 
         position: relative !important; 
-        bottom: 60px !important; /* কার্ডের পজিশন সামঞ্জস্য করা হয়েছে */
+        bottom: 55px !important; 
         right: auto !important; 
         margin: 0 auto !important; 
-        width: 85% !important;
+        width: 82% !important; /* কার্ডের প্রস্থ কিছুটা কমানো হয়েছে */
         left: auto !important;
         transform: none !important;
+        padding: 8px 12px !important; /* প্যাডিং কমিয়ে কার্ডটি চিকন করা হয়েছে */
+        gap: 10px !important;
+    }
+
+    .glass-content h4 {
+        font-size: 14px !important; /* নামটির সাইজ সামান্য ছোট করা হয়েছে */
+        margin-bottom: 2px !important;
+    }
+
+    .glass-content p {
+        font-size: 11px !important; /* নিচের লেখার সাইজ ছোট করা হয়েছে */
+        line-height: 1.2 !important;
+    }
+
+    .check-box {
+        width: 24px !important; /* টিক বক্সটি সামান্য ছোট করা হয়েছে */
+        height: 24px !important;
     }
     
     .hero-text { 
         order: 2 !important; 
         padding: 0px 10px 80px; 
         width: 100%;
-        margin-top: -10px !important; /* টেক্সটকে ছবির আরও কাছে আনা হয়েছে */
+        margin-top: -10px !important; 
     }
     .hero-text h1 { font-size: 36px; }
     .hero-btns { justify-content: center; flex-direction: column; }
