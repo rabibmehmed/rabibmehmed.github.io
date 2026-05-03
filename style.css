@@ -12,6 +12,7 @@ body {
 
 .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 15px; }
 
+/* Header */
 header { padding: 10px 0; background: #050510; }
 .nav-bar { display: flex; justify-content: space-between; align-items: center; }
 .logo { font-size: 20px; font-weight: 700; }
@@ -20,6 +21,7 @@ nav ul { display: flex; list-style: none; gap: 15px; }
 nav ul li a { color: #ccc; text-decoration: none; font-size: 12px; }
 .btn-top { background: #6c5ce7; padding: 6px 15px; border-radius: 6px; color: white; text-decoration: none; font-size: 11px; }
 
+/* Hero Section */
 .hero-section { min-height: 65vh; display: flex; align-items: flex-end; position: relative; }
 .hero-wrapper { display: flex; align-items: flex-end; justify-content: space-between; width: 100%; }
 
@@ -56,12 +58,25 @@ nav ul li a { color: #ccc; text-decoration: none; font-size: 12px; }
 .s-item strong { font-size: 16px; }
 .s-item p { font-size: 9px; color: #555; }
 
+/* Bottom Section */
 .bottom-section { background: white; padding: 30px 0; color: #333; }
 .title-center { text-align: center; margin-bottom: 20px; }
 .content-split { display: flex; gap: 20px; }
-.course-banner { flex: 1.2; position: relative; border-radius: 12px; overflow: hidden; }
-.course-banner img { width: 100%; display: block; }
-.price-tag { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); font-size: 20px; font-weight: 700; color: white; }
+
+/* Course Banner & Button Styling */
+.course-banner .banner-wrapper { position: relative; display: inline-block; width: 100%; }
+.course-banner img { width: 100%; display: block; border-radius: 12px; }
+.price-tag { position: absolute; bottom: 10px; left: 20px; font-size: 20px; font-weight: 700; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+
+.enroll-btn-float {
+    position: absolute; bottom: 15px; right: 15px; z-index: 10;
+    background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px 20px; border-radius: 30px; border: 1px solid rgba(255, 255, 255, 0.3);
+    text-decoration: none; color: white; font-weight: 700; font-size: 13px;
+    display: flex; align-items: center; gap: 8px; transition: 0.3s;
+}
+.enroll-btn-float:hover { background: rgba(255, 255, 255, 0.25); transform: translateY(-2px); }
 
 .channel-list { flex: 1; display: flex; flex-direction: column; gap: 10px; }
 .channel-card { display: flex; align-items: center; gap: 10px; padding: 10px; border: 1px solid #eee; border-radius: 10px; }
@@ -70,16 +85,16 @@ nav ul li a { color: #ccc; text-decoration: none; font-size: 12px; }
 .fb-icon { color: #1877f2; }
 .tg-icon { color: #0088cc; }
 
-/* Mobile Fixes for Zoom */
+/* Mobile Fixes */
 @media (max-width: 768px) {
     body { overflow-y: auto; height: auto; }
     .hero-wrapper { flex-direction: column-reverse; align-items: center; width: 100%; }
     .hero-text { width: 100%; text-align: center; padding: 20px 0; }
-    .hero-btns { justify-content: center; }
-    .social-follow { justify-content: center; }
+    .hero-btns, .social-follow { justify-content: center; }
     .hero-image-area { width: 100%; justify-content: center; }
     .profile-img { max-width: 300px; }
     .content-split { flex-direction: column; }
     .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    nav, .btn-top { display: none; } /* মোবাইলে মেনু হাইড */
+    nav, .btn-top { display: none; }
+    .enroll-btn-float { padding: 8px 15px; font-size: 11px; bottom: 10px; right: 10px; }
 }
