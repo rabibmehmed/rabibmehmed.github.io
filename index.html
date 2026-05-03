@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Rabib Mehmed | 100% Correct</title>
+    <title>Rabib Mehmed | 100% Final Fix</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -32,20 +32,22 @@
                 <div class="badge anim-zoom-in">Welcome to <strong>My Learning Platform</strong> 👋</div>
                 <h1 class="anim-slide-left">Learn. Apply.<br>Earn <span>Online.</span></h1>
                 <p class="anim-zoom-in delay-1">Practical Digital Skills & Freelancing Courses Designed to Help You Build Freedom & Income.</p>
-                <div class="social-follow anim-zoom-in delay-2">
-                    <span>Follow Me:</span>
-                    <a href="#" class="si-glass"><i class="fab fa-youtube"></i></a>
-                    <a href="#" class="si-glass"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="si-glass"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="si-glass"><i class="fab fa-telegram-plane"></i></a>
-                    <a href="#" class="si-glass"><i class="fab fa-tiktok"></i></a>
+                
+                <div class="social-follow">
+                    <span class="follow-text anim-slide-left delay-2">Follow Me:</span>
+                    <div class="social-icons">
+                        <a href="#" class="si-glass icon-anim-1"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="si-glass icon-anim-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="si-glass icon-anim-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="si-glass icon-anim-4"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="#" class="si-glass icon-anim-5"><i class="fab fa-tiktok"></i></a>
+                    </div>
                 </div>
             </div>
             
             <div class="hero-image-area">
                 <div class="main-glow"></div>
                 <img src="profile.png" alt="Rabib Mehmed" class="profile-img anim-slide-up">
-                
                 <div class="floating-glass-card anim-zoom-in delay-3">
                     <div class="check-box">✔</div>
                     <div class="glass-content">
@@ -59,7 +61,7 @@
 
     <div class="divider-wrapper">
         <div class="container">
-            <div class="mid-status-bar anim-zoom-in delay-2">
+            <div class="mid-status-bar anim-zoom-in delay-3">
                 <div class="st-box"><i class="fas fa-user-graduate"></i> <div><strong>1,200+</strong><p>Students Enrolled</p></div></div>
                 <div class="st-box"><i class="fas fa-play-circle"></i> <div><strong>15+</strong><p>Premium Courses</p></div></div>
                 <div class="st-box"><i class="fas fa-star"></i> <div><strong>4.9/5</strong><p>Average Rating</p></div></div>
@@ -70,16 +72,15 @@
 
     <section class="white-section">
         <div class="container">
-            <div class="title-head anim-fade-in">
+            <div class="title-head">
                 <span>MY COURSES</span>
                 <h2>Popular Courses</h2>
             </div>
-            
             <div class="course-grid">
-                <a href="#" class="course-card anim-zoom-in"><img src="course1.png"></a>
-                <a href="#" class="course-card anim-zoom-in"><img src="course2.png"></a>
-                <a href="#" class="course-card anim-zoom-in"><img src="course3.png"></a>
-                <a href="#" class="course-card anim-zoom-in"><img src="course4.png"></a>
+                <a href="#" class="course-card"><img src="course1.png"></a>
+                <a href="#" class="course-card"><img src="course2.png"></a>
+                <a href="#" class="course-card"><img src="course3.png"></a>
+                <a href="#" class="course-card"><img src="course4.png"></a>
             </div>
         </div>
     </section>
@@ -87,7 +88,11 @@
     <script>
         const menuBtn = document.getElementById('mobileMenuBtn');
         const navMenu = document.getElementById('navMenu');
-        menuBtn.addEventListener('click', () => { navMenu.classList.toggle('active'); });
+        menuBtn.addEventListener('click', () => { 
+            navMenu.classList.toggle('active');
+            menuBtn.querySelector('i').classList.toggle('fa-bars');
+            menuBtn.querySelector('i').classList.toggle('fa-times'); // ক্লোজ বাটন ইফেক্ট
+        });
     </script>
 
 </body>
