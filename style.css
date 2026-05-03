@@ -19,7 +19,10 @@ nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
 .hero-section { min-height: 100vh; display: flex; align-items: flex-end; padding-top: 60px; position: relative; }
 .hero-wrapper { display: flex; align-items: center; justify-content: space-between; width: 100%; }
 .hero-text { flex: 1.2; z-index: 10; padding-bottom: 80px; order: 1; }
+
+/* Desktop Badge Style (আগের মতোই থাকবে) */
 .hero-text .badge { background: rgba(138, 99, 255, 0.1); color: #8a63ff; display: inline-block; padding: 8px 16px; border-radius: 50px; font-size: 14px; margin-bottom: 20px; border: 1px solid rgba(138, 99, 255, 0.2); }
+
 .hero-text h1 { font-size: 75px; font-weight: 800; line-height: 1.05; margin-bottom: 20px; }
 .hero-text h1 span { color: #8a63ff; }
 .hero-text p { font-size: 20px; color: #aaa; margin-bottom: 30px; max-width: 550px; }
@@ -34,12 +37,7 @@ nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
 .si-glass:hover { transform: translateY(-5px); background: #8a63ff; border-color: #8a63ff; box-shadow: 0 10px 15px rgba(138, 99, 255, 0.4); }
 
 .hero-image-area { flex: 1.2; position: relative; display: flex; justify-content: flex-end; align-items: flex-end; order: 2; }
-.profile-img { 
-    width: 100%; max-width: 650px; filter: drop-shadow(0 0 50px rgba(138, 99, 255, 0.15)); 
-    display: block; margin-bottom: -5px; z-index: 5;
-    /* ডাউনলোড প্রোটেকশন */
-    -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; pointer-events: none;
-}
+.profile-img { width: 100%; max-width: 650px; filter: drop-shadow(0 0 50px rgba(138, 99, 255, 0.15)); display: block; margin-bottom: -5px; z-index: 5;}
 .floating-glass-card { position: absolute; bottom: 150px; right: 20px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); padding: 15px 25px; border-radius: 15px; display: flex; align-items: center; gap: 15px; border: 1px solid rgba(255, 255, 255, 0.1); z-index: 15; }
 .check-box { background: #8a63ff; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; }
 
@@ -64,7 +62,10 @@ nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
 .course-card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
 .course-title { font-size: 18px; font-weight: 700; color: #111; margin-top: 15px; margin-bottom: 5px; }
 
-/* --- Mobile Optimised (ইউটিউব স্টাইল ও স্লিম কার্ড ফিক্স) --- */
+/* =========================================
+   Mobile Optimised (@media block)
+   আপনার সমস্ত পরিবর্তন এই ব্লকের ভেতরে
+   ========================================= */
 @media (max-width: 768px) {
     header { padding: 15px 0; background: #050510; position: fixed; }
     .mobile-menu-icon { display: block; }
@@ -81,12 +82,16 @@ nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
     }
     .profile-img { width: 100%; max-width: 380px; }
     
-    /* স্লিম গ্লাস কার্ড */
+    /* ---------------------------------
+       ১ নম্বর সমস্যার সমাধান: গ্লাস কার্ড পজিশন
+       সামান্য উপরে এবং সামান্য ডানদিকে সরানো হয়েছে
+    --------------------------------- */
     .floating-glass-card { 
         position: relative !important; bottom: 55px !important; 
         right: auto !important; margin: 0 auto !important; 
         width: 82% !important; left: auto !important;
-        transform: none !important; padding: 8px 12px !important; gap: 10px !important;
+        transform: translate(15px, -15px) !important; /* উপরে (-15px) এবং ডানদিকে (15px) সরানো হয়েছে */
+        padding: 8px 12px !important; gap: 10px !important;
     }
     .glass-content h4 { font-size: 14px !important; margin-bottom: 2px !important; }
     .glass-content p { font-size: 11px !important; line-height: 1.2 !important; }
@@ -96,12 +101,40 @@ nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
         order: 2 !important; padding: 0px 10px 80px; 
         width: 100%; margin-top: -10px !important; 
     }
+    
+    /* ---------------------------------
+       ১ নম্বর সমস্যার সমাধান: Welcome ব্যানার ব্লার
+       এটিকে আরও ব্লার এবং হালকা ট্রান্সপারেন্ট করা হয়েছে
+    --------------------------------- */
+    .hero-text .badge {
+        background: rgba(138, 99, 255, 0.4) !important; /* হালকা কালার */
+        color: #fff !important; /* টেক্সট সাদা */
+        backdrop-filter: blur(25px) !important; /* ব্লার এফেক্ট বাড়ানো হয়েছে */
+        -webkit-backdrop-filter: blur(25px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important; /* হালকা বর্ডার */
+        opacity: 0.8 !important; /* হালকা অপাসিটি */
+    }
+
     .hero-text h1 { font-size: 36px; }
     .hero-btns { justify-content: center; flex-direction: column; }
 
     .mid-status-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; transform: translateY(-40px); margin: 0 10px; }
     
-    /* ইউটিউব স্টাইল কোর্স লেআউট */
-    .course-grid { grid-template-columns: 1fr !important; padding: 0 20px; gap: 40px; }
+    /* ---------------------------------
+       ২ নম্বর সমস্যার সমাধান: কোর্স গ্রিড গ্যাপ
+       এখানে গ্যাপ বাড়ানো হয়েছে এবং নিচের কোর্সগুলোকে আরও নিচে নামানো হয়েছে
+    --------------------------------- */
+    .course-grid { 
+        grid-template-columns: 1fr !important; /* এক লাইনে একটি কোর্স */
+        padding: 0 20px; 
+        gap: 60px !important; /* প্রতিটি কোর্সের মাঝে বড় গ্যাপ */
+        margin-top: 30px !important; /* গ্রিডের ওপরেও বাড়তি জায়গা */
+    }
     .course-title { font-size: 16px; margin-top: 10px; padding: 0 5px; }
+
+    /* "MY COURSES" সাব-টাইটেলের নিচে গ্যাপ সামঞ্জস্য */
+    .title-head .sub-title {
+        margin-bottom: 10px !important;
+        display: block;
+    }
 }
