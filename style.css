@@ -46,13 +46,20 @@ nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
 .st-box strong { font-size: 20px; display: block; }
 .st-box p { font-size: 13px; color: #888; }
 
-/* Course Section */
+/* Course Section - Updated for Image Buttons & Hover Effect */
 .course-section { background: white; color: #111; padding: 120px 0 80px; text-align: center; }
 .course-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-.course-card img { width: 100%; border-radius: 15px; transition: 0.3s; }
-.view-all-btn { display: inline-block; margin-top: 50px; background: #6366f1; color: white; padding: 14px 35px; border-radius: 10px; text-decoration: none; font-weight: 600; }
 
-/* Mobile Optimised Query - এটি মোবাইলে সব ঠিক করবে */
+.course-card { text-decoration: none; display: block; overflow: hidden; border-radius: 15px; transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease; }
+.course-card img { width: 100%; display: block; border-radius: 15px; transition: 0.3s; }
+
+/* কার্সর নিলে ছবি ওপরে উঠবে (Hover Effect) */
+.course-card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+
+.view-all-btn { display: inline-block; margin-top: 50px; background: #6366f1; color: white; padding: 14px 35px; border-radius: 10px; text-decoration: none; font-weight: 600; transition: 0.3s; }
+.view-all-btn:hover { background: #4f46e5; transform: scale(1.05); }
+
+/* Mobile Optimised Query */
 @media (max-width: 768px) {
     header { padding: 15px 0; background: #050510; position: fixed; }
     .mobile-menu-icon { display: block; }
@@ -64,21 +71,18 @@ nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
     .hero-section { padding-top: 80px; min-height: auto; display: block; }
     .hero-wrapper { flex-direction: column; text-align: center; }
     
-    /* মোবাইলে ছবি আগে আসবে এবং গ্যাপ কম থাকবে */
     .hero-image-area { order: 1; width: 100%; justify-content: center; margin-top: 10px; margin-bottom: -10px; }
     .profile-img { width: 100%; max-width: 400px; margin-bottom: -5px; }
     .floating-glass-card { right: auto; left: 50%; transform: translateX(-50%); bottom: 20px; width: 85%; padding: 10px 15px; }
 
-    /* টেক্সট যেন ওভারল্যাপ না হয় */
     .hero-text { order: 2; padding: 40px 10px 100px; }
     .hero-text h1 { font-size: 36px; line-height: 1.2; }
     .hero-text p { font-size: 16px; margin: 0 auto 25px; line-height: 1.5; }
     .hero-btns { justify-content: center; flex-direction: column; width: 100%; }
-    .social-follow { flex-direction: column; gap: 10px; }
 
-    /* স্ট্যাটাস বার গ্রিড আকারে সাজানো */
     .mid-status-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; transform: translateY(-40px); margin: 0 10px; padding: 20px; }
     .st-box { flex-direction: column; text-align: center; gap: 5px; }
     
-    .course-grid { grid-template-columns: 1fr; padding: 0 10px; }
+    /* মোবাইলে কোর্সগুলো দুই কলামে দেখাবে */
+    .course-grid { grid-template-columns: 1fr 1fr; padding: 0 10px; }
 }
