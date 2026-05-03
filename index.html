@@ -81,15 +81,28 @@
                 <h2>Popular Courses</h2>
             </div>
             <div class="course-grid">
-                <a href="course-shopify.html" class="course-card"><img src="photo1.png" alt="Course"></a>
-                <a href="course-dropshipping.html" class="course-card"><img src="photo2.png" alt="Course"></a>
-                <a href="course-fb-ads.html" class="course-card"><img src="photo3.png" alt="Course"></a>
-                <a href="course-marketing.html" class="course-card"><img src="photo4.png" alt="Course"></a>
+                <div class="course-item">
+                    <a href="course-shopify.html" class="course-card"><img src="photo1.png" alt="Course"></a>
+                    <h3 class="course-title">Shopify Dropshipping Masterclass</h3>
+                </div>
+                <div class="course-item">
+                    <a href="course-dropshipping.html" class="course-card"><img src="photo2.png" alt="Course"></a>
+                    <h3 class="course-title">Millionaire Roadmap 2026</h3>
+                </div>
+                <div class="course-item">
+                    <a href="course-fb-ads.html" class="course-card"><img src="photo3.png" alt="Course"></a>
+                    <h3 class="course-title">Facebook Ads Expert Training</h3>
+                </div>
+                <div class="course-item">
+                    <a href="course-marketing.html" class="course-card"><img src="photo4.png" alt="Course"></a>
+                    <h3 class="course-title">Digital Marketing Strategy</h3>
+                </div>
             </div>
         </div>
     </section>
 
     <script>
+        // মোবাইল মেনু স্ক্রিপ্ট
         const menuBtn = document.getElementById('mobileMenuBtn');
         const navMenu = document.getElementById('navMenu');
         menuBtn.addEventListener('click', () => { 
@@ -97,6 +110,13 @@
             menuBtn.querySelector('i').classList.toggle('fa-bars');
             menuBtn.querySelector('i').classList.toggle('fa-times');
         });
+
+        // ইমেজ ডাউনলোড প্রোটেকশন (Right Click Disable)
+        document.addEventListener('contextmenu', function(e) {
+            if (e.target.nodeName === 'IMG') {
+                e.preventDefault();
+            }
+        }, false);
     </script>
 </body>
 </html>
