@@ -1,100 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Rabib Mehmed | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+    <header class="animate__animated animate__fadeInDown">
+        <div class="container nav-bar">
+            <div class="logo animate__animated animate__slideInLeft">Rabib <span class="accent">Mehmed</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </nav>
+            <a href="https://t.me/rabibmehmed" target="_blank" class="btn-top click-effect">Get Started 🚀</a>
+        </div>
+    </header>
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #050510;
-    color: white;
-    overflow-x: hidden;
-    width: 100%;
-}
+    <main class="hero-section">
+        <div class="container hero-wrapper">
+            <div class="hero-text animate__animated animate__fadeInUp">
+                <div class="badge">Welcome to <strong>My Learning Platform</strong> 👋</div>
+                <h1>Learn. Apply.<br>Earn <span>Online.</span></h1>
+                <p>Practical Digital Skills & Freelancing Courses Designed to Help You Build Freedom & Income.</p>
+                <div class="hero-btns">
+                    <a href="#" class="btn-browse click-effect"><i class="fas fa-rocket"></i> Browse Courses</a>
+                    <a href="#" class="btn-about click-effect"><i class="fas fa-user"></i> About Me</a>
+                </div>
+                <div class="social-follow">
+                    <span>Follow Me:</span>
+                    <a href="https://www.youtube.com/@rabibmehmed" target="_blank" class="social-icon yt click-effect"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/rabibmehmed" target="_blank" class="social-icon fb click-effect"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/rabibmehmed" target="_blank" class="social-icon ig click-effect"><i class="fab fa-instagram"></i></a>
+                    <a href="https://t.me/rabibmehmed" target="_blank" class="social-icon tg click-effect"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="https://www.tiktok.com/@rabibmehmed" target="_blank" class="social-icon tk click-effect"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <div class="hero-image-area animate__animated animate__zoomIn">
+                <div class="main-glow"></div>
+                <img src="profile.png" alt="Rabib Mehmed" class="profile-img">
+                <div class="floating-card animate__animated animate__fadeInRight animate__delay-1s">
+                    <div class="check-icon">✔</div>
+                    <div class="card-info">
+                        <h4>Rabib Mehmed</h4>
+                        <p>Freelancer • Course Creator</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
-.container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 15px; }
+    <div class="stats-wrapper animate__animated animate__fadeInUp animate__delay-1s">
+        <div class="container">
+            <div class="stats-strip floating-element">
+                <div class="s-item"><i class="fas fa-user-graduate"></i> <div><strong>1,200+</strong><p>Students</p></div></div>
+                <div class="s-item"><i class="fas fa-play-circle"></i> <div><strong>1+</strong><p>Master Course</p></div></div>
+                <div class="s-item"><i class="fas fa-star"></i> <div><strong>4.9/5</strong><p>Rating</p></div></div>
+                <div class="s-item"><i class="fas fa-users"></i> <div><strong>100%</strong><p>Satisfaction</p></div></div>
+            </div>
+        </div>
+    </div>
 
-/* Header */
-header { padding: 10px 0; background: #050510; }
-.nav-bar { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 20px; font-weight: 700; }
-.accent { color: #8a63ff; }
-nav ul { display: flex; list-style: none; gap: 15px; }
-nav ul li a { color: #ccc; text-decoration: none; font-size: 12px; }
-.btn-top { background: #6c5ce7; padding: 6px 15px; border-radius: 6px; color: white; text-decoration: none; font-size: 11px; }
+    <section class="bottom-section">
+        <div class="container">
+            <div class="title-center animate__animated animate__fadeIn">
+                <span>MY COURSES</span>
+                <h2>Popular Courses</h2>
+            </div>
+            <div class="content-split">
+                <div class="course-container">
+                    <a href="checkout.html" class="banner-box click-effect">
+                        <img src="course_banner.png" alt="Master Course">
+                        <div class="enroll-btn">Enroll Now</div>
+                    </a>
+                </div>
 
-/* Hero Section */
-.hero-section { min-height: 65vh; display: flex; align-items: flex-end; position: relative; }
-.hero-wrapper { display: flex; align-items: flex-end; justify-content: space-between; width: 100%; }
+                <div class="channel-list">
+                    <a href="https://www.youtube.com/@rabibmehmed" target="_blank" class="channel-card click-effect">
+                        <i class="fab fa-youtube yt-icon"></i>
+                        <div class="ch-text"><h4>My YouTube Channel</h4><p>Subscribers: 15K+</p></div>
+                    </a>
+                    <a href="https://www.facebook.com/rabibmehmed" target="_blank" class="channel-card click-effect">
+                        <i class="fab fa-facebook fb-icon"></i>
+                        <div class="ch-text"><h4>My Facebook Account</h4><p>Followers: 10K+</p></div>
+                    </a>
+                    <a href="https://t.me/rabibmehmed" target="_blank" class="channel-card click-effect">
+                        <i class="fab fa-telegram tg-icon"></i>
+                        <div class="ch-text"><h4>My Telegram Channel</h4><p>Members: 8K+</p></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.hero-text { flex: 1; padding-bottom: 40px; }
-.badge { background: rgba(255,255,255,0.05); padding: 5px 12px; border-radius: 20px; font-size: 10px; margin-bottom: 10px; display: inline-block; }
-.hero-text h1 { font-size: 40px; line-height: 1.1; margin-bottom: 15px; }
-.hero-text h1 span { color: #8a63ff; }
-.hero-text p { color: #888; font-size: 13px; max-width: 380px; margin-bottom: 20px; }
-
-.hero-btns { display: flex; gap: 10px; margin-bottom: 20px; }
-.btn-browse { background: #6c5ce7; padding: 10px 18px; border-radius: 8px; color: white; text-decoration: none; font-size: 12px; font-weight: 600; }
-.btn-about { border: 1px solid #333; padding: 10px 18px; border-radius: 8px; color: white; text-decoration: none; font-size: 12px; }
-
-.social-follow { display: flex; gap: 10px; }
-.social-follow a { background: #1a1a3a; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; font-size: 12px; }
-
-.hero-image-area { flex: 1; position: relative; display: flex; justify-content: flex-end; align-items: flex-end; }
-.main-glow { position: absolute; width: 300px; height: 300px; background: radial-gradient(circle, rgba(138, 99, 255, 0.2) 0%, transparent 70%); bottom: 0; right: 0; }
-.profile-img { width: 100%; max-width: 400px; z-index: 2; display: block; margin-bottom: -2px; }
-
-.floating-card {
-    position: absolute; bottom: 50px; right: 10px; z-index: 3;
-    background: rgba(20, 20, 40, 0.85); backdrop-filter: blur(10px);
-    padding: 8px 12px; border-radius: 10px; display: flex; align-items: center; gap: 8px;
-    border: 1px solid rgba(255,255,255,0.1);
-}
-.check-icon { background: #8a63ff; color: white; width: 16px; height: 16px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 8px; }
-.card-info h4 { font-size: 11px; }
-.card-info p { font-size: 8px; color: #aaa; }
-
-.stats-strip { background: #0b0b1a; padding: 15px 0; border-top: 1px solid #1a1a3a; }
-.stats-grid { display: flex; justify-content: space-around; }
-.s-item { display: flex; align-items: center; gap: 8px; }
-.s-item strong { font-size: 16px; }
-.s-item p { font-size: 9px; color: #555; }
-
-/* Bottom Section */
-.bottom-section { background: white; padding: 30px 0; color: #333; }
-.title-center { text-align: center; margin-bottom: 20px; }
-.content-split { display: flex; gap: 20px; }
-
-/* Course Banner & Button Styling */
-.course-banner .banner-wrapper { position: relative; display: inline-block; width: 100%; }
-.course-banner img { width: 100%; display: block; border-radius: 12px; }
-.price-tag { position: absolute; bottom: 10px; left: 20px; font-size: 20px; font-weight: 700; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
-
-.enroll-btn-float {
-    position: absolute; bottom: 15px; right: 15px; z-index: 10;
-    background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 10px 20px; border-radius: 30px; border: 1px solid rgba(255, 255, 255, 0.3);
-    text-decoration: none; color: white; font-weight: 700; font-size: 13px;
-    display: flex; align-items: center; gap: 8px; transition: 0.3s;
-}
-.enroll-btn-float:hover { background: rgba(255, 255, 255, 0.25); transform: translateY(-2px); }
-
-.channel-list { flex: 1; display: flex; flex-direction: column; gap: 10px; }
-.channel-card { display: flex; align-items: center; gap: 10px; padding: 10px; border: 1px solid #eee; border-radius: 10px; }
-.channel-card i { font-size: 24px; }
-.yt-icon { color: #ff0000; }
-.fb-icon { color: #1877f2; }
-.tg-icon { color: #0088cc; }
-
-/* Mobile Fixes */
-@media (max-width: 768px) {
-    body { overflow-y: auto; height: auto; }
-    .hero-wrapper { flex-direction: column-reverse; align-items: center; width: 100%; }
-    .hero-text { width: 100%; text-align: center; padding: 20px 0; }
-    .hero-btns, .social-follow { justify-content: center; }
-    .hero-image-area { width: 100%; justify-content: center; }
-    .profile-img { max-width: 300px; }
-    .content-split { flex-direction: column; }
-    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    nav, .btn-top { display: none; }
-    .enroll-btn-float { padding: 8px 15px; font-size: 11px; bottom: 10px; right: 10px; }
-}
+</body>
+</html>
