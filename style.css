@@ -15,11 +15,11 @@ nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
 .nav-btn:hover { color: #8a63ff; }
 .mobile-menu-icon { display: none; font-size: 24px; cursor: pointer; color: white; z-index: 2001; }
 
-/* --- Hero Section (Desktop) --- */
+/* --- Hero Section (Desktop - বামে লেখা, ডানে ছবি) --- */
 .hero-section { min-height: 100vh; display: flex; align-items: flex-end; padding-top: 60px; position: relative; }
 .hero-wrapper { display: flex; align-items: center; justify-content: space-between; width: 100%; }
 
-.hero-text { flex: 1.2; z-index: 10; padding-bottom: 80px; }
+.hero-text { flex: 1.2; z-index: 10; padding-bottom: 80px; order: 1; } /* পিসিতে ১ নম্বর পজিশন */
 .hero-text .badge { background: rgba(138, 99, 255, 0.1); color: #8a63ff; display: inline-block; padding: 8px 16px; border-radius: 50px; font-size: 14px; margin-bottom: 20px; border: 1px solid rgba(138, 99, 255, 0.2); }
 .hero-text h1 { font-size: 75px; font-weight: 800; line-height: 1.05; margin-bottom: 20px; }
 .hero-text h1 span { color: #8a63ff; }
@@ -34,7 +34,7 @@ nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
 .si-glass { background: rgba(255, 255, 255, 0.05); width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; border: 1px solid rgba(255,255,255,0.1); transition: 0.4s; }
 .si-glass:hover { transform: translateY(-5px); background: #8a63ff; border-color: #8a63ff; box-shadow: 0 10px 15px rgba(138, 99, 255, 0.4); }
 
-.hero-image-area { flex: 1.2; position: relative; display: flex; justify-content: flex-end; align-items: flex-end; }
+.hero-image-area { flex: 1.2; position: relative; display: flex; justify-content: flex-end; align-items: flex-end; order: 2; } /* পিসিতে ২ নম্বর পজিশন */
 .profile-img { width: 100%; max-width: 650px; filter: drop-shadow(0 0 50px rgba(138, 99, 255, 0.15)); display: block; margin-bottom: -5px; z-index: 5;}
 
 /* Floating Card Desktop */
@@ -52,13 +52,9 @@ nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
 /* --- Course Section --- */
 .course-section { background: white; color: #111; padding: 120px 0 80px; text-align: center; }
 .course-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-
 .course-card { text-decoration: none; display: block; overflow: hidden; border-radius: 15px; transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease; }
 .course-card img { width: 100%; display: block; border-radius: 15px; transition: 0.3s; }
 .course-card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
-
-.view-all-btn { display: inline-block; margin-top: 50px; background: #6366f1; color: white; padding: 14px 35px; border-radius: 10px; text-decoration: none; font-weight: 600; transition: 0.3s; }
-.view-all-btn:hover { background: #4f46e5; transform: scale(1.05); }
 
 /* --- Mobile Optimised (Only for Mobile) --- */
 @media (max-width: 768px) {
@@ -68,32 +64,26 @@ nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
     nav { position: fixed; top: 0; right: -100%; width: 75%; height: 100vh; background: #0a0a1e; z-index: 2000; transition: 0.4s; display: flex; align-items: center; justify-content: center; }
     nav.active { right: 0; }
     nav ul { flex-direction: column; gap: 25px; }
-    .nav-btn { font-size: 22px; font-weight: 600; }
 
     .hero-section { padding-top: 80px; min-height: auto; display: block; overflow: hidden; }
     .hero-wrapper { flex-direction: column; text-align: center; width: 100%; }
     
-    /* মোবাইলে ছবি উপরে থাকবে */
-    .hero-image-area { order: 1; width: 100%; justify-content: center; margin-top: 10px; position: relative; display: flex; }
-    .profile-img { width: 100%; max-width: 400px; margin-bottom: -5px; }
+    /* মোবাইলে ছবি উপরে আসার জন্য order পরিবর্তন */
+    .hero-image-area { order: 1 !important; width: 100%; justify-content: center; margin-top: 10px; position: relative; display: flex; }
+    .profile-img { width: 100%; max-width: 400px; }
     
-    /* গ্লাস কার্ড মোবাইলে সেন্টারে আনা হয়েছে যাতে স্ক্রিনের বাইরে না যায় */
     .floating-glass-card { 
-        right: 50%; 
-        transform: translateX(50%); 
+        right: 50% !important; 
+        transform: translateX(50%) !important; 
         bottom: 20px; 
         width: 85%; 
-        padding: 10px 15px; 
-        left: auto;
+        left: auto !important;
     }
 
-    .hero-text { order: 2; padding: 40px 10px 100px; width: 100%; }
+    .hero-text { order: 2 !important; padding: 40px 10px 100px; width: 100%; }
     .hero-text h1 { font-size: 36px; line-height: 1.2; }
-    .hero-text p { font-size: 16px; margin: 0 auto 25px; line-height: 1.5; }
-    .hero-btns { justify-content: center; flex-direction: column; width: 100%; }
+    .hero-btns { justify-content: center; flex-direction: column; }
 
-    .mid-status-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; transform: translateY(-40px); margin: 0 10px; padding: 20px; }
-    .st-box { flex-direction: column; text-align: center; gap: 5px; }
-    
+    .mid-status-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; transform: translateY(-40px); margin: 0 10px; }
     .course-grid { grid-template-columns: 1fr 1fr; padding: 0 10px; }
 }
