@@ -6,7 +6,7 @@ body { font-family: 'Poppins', sans-serif; background: #050510; color: white; ov
 .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
 /* --- Header & Nav --- */
-header { padding: 25px 0; background: transparent; position: absolute; width: 100%; z-index: 1000; }
+header { padding: 15px 0; background: transparent; position: absolute; width: 100%; z-index: 1000; } /* ✅ changed */
 .nav-bar { display: flex; justify-content: space-between; align-items: center; }
 .logo { font-size: 24px; font-weight: 800; cursor: pointer; }
 .accent { color: #8a63ff; }
@@ -16,11 +16,17 @@ nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
 .mobile-menu-icon { display: none; font-size: 24px; cursor: pointer; color: white; z-index: 2001; }
 
 /* --- Hero Section (Desktop) --- */
-.hero-section { min-height: 100vh; display: flex; align-items: flex-end; padding-top: 60px; position: relative; }
+.hero-section { 
+    min-height: 100vh; 
+    display: flex; 
+    align-items: center; /* ✅ changed */
+    padding-top: 20px; /* ✅ changed */
+    position: relative; 
+}
 .hero-wrapper { display: flex; align-items: center; justify-content: space-between; width: 100%; }
 .hero-text { flex: 1.2; z-index: 10; padding-bottom: 80px; order: 1; }
 
-/* Desktop Badge Style (আগের মতোই থাকবে) */
+/* Desktop Badge Style */
 .hero-text .badge { background: rgba(138, 99, 255, 0.1); color: #8a63ff; display: inline-block; padding: 8px 16px; border-radius: 50px; font-size: 14px; margin-bottom: 20px; border: 1px solid rgba(138, 99, 255, 0.2); }
 
 .hero-text h1 { font-size: 75px; font-weight: 800; line-height: 1.05; margin-bottom: 20px; }
@@ -62,10 +68,7 @@ nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
 .course-card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
 .course-title { font-size: 18px; font-weight: 700; color: #111; margin-top: 15px; margin-bottom: 5px; }
 
-/* =========================================
-   Mobile Optimised (@media block)
-   আপনার সমস্ত পরিবর্তন এই ব্লকের ভেতরে
-   ========================================= */
+/* --- Mobile --- */
 @media (max-width: 768px) {
     header { padding: 15px 0; background: #050510; position: fixed; }
     .mobile-menu-icon { display: block; }
@@ -75,64 +78,45 @@ nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
 
     .hero-section { padding-top: 50px; min-height: auto; display: block; }
     .hero-wrapper { flex-direction: column; text-align: center; }
-    
-    .hero-image-area { 
-        order: 1 !important; margin-bottom: -50px !important; 
-        justify-content: center; display: flex; flex-direction: column; align-items: center;
-    }
+
+    .hero-image-area { order: 1 !important; margin-bottom: -50px !important; justify-content: center; display: flex; flex-direction: column; align-items: center; }
     .profile-img { width: 100%; max-width: 380px; }
-    
-    /* ---------------------------------
-       ১ নম্বর সমস্যার সমাধান: গ্লাস কার্ড পজিশন
-       সামান্য উপরে এবং সামান্য ডানদিকে সরানো হয়েছে
-    --------------------------------- */
+
     .floating-glass-card { 
         position: relative !important; bottom: 55px !important; 
         right: auto !important; margin: 0 auto !important; 
         width: 82% !important; left: auto !important;
-        transform: translate(15px, -15px) !important; /* উপরে (-15px) এবং ডানদিকে (15px) সরানো হয়েছে */
+        transform: translate(15px, -15px) !important;
         padding: 8px 12px !important; gap: 10px !important;
     }
     .glass-content h4 { font-size: 14px !important; margin-bottom: 2px !important; }
     .glass-content p { font-size: 11px !important; line-height: 1.2 !important; }
     .check-box { width: 24px !important; height: 24px !important; }
-    
-    .hero-text { 
-        order: 2 !important; padding: 0px 10px 80px; 
-        width: 100%; margin-top: -10px !important; 
-    }
-    
-    /* ---------------------------------
-       ১ নম্বর সমস্যার সমাধান: Welcome ব্যানার ব্লার
-       এটিকে আরও ব্লার এবং হালকা ট্রান্সপারেন্ট করা হয়েছে
-    --------------------------------- */
+
+    .hero-text { order: 2 !important; padding: 0px 10px 80px; width: 100%; margin-top: -10px !important; }
+
     .hero-text .badge {
-        background: rgba(138, 99, 255, 0.4) !important; /* হালকা কালার */
-        color: #fff !important; /* টেক্সট সাদা */
-        backdrop-filter: blur(25px) !important; /* ব্লার এফেক্ট বাড়ানো হয়েছে */
+        background: rgba(138, 99, 255, 0.4) !important;
+        color: #fff !important;
+        backdrop-filter: blur(25px) !important;
         -webkit-backdrop-filter: blur(25px) !important;
-        border: 1px solid rgba(255, 255, 255, 0.2) !important; /* হালকা বর্ডার */
-        opacity: 0.8 !important; /* হালকা অপাসিটি */
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        opacity: 0.8 !important;
     }
 
     .hero-text h1 { font-size: 36px; }
     .hero-btns { justify-content: center; flex-direction: column; }
 
     .mid-status-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; transform: translateY(-40px); margin: 0 10px; }
-    
-    /* ---------------------------------
-       ২ নম্বর সমস্যার সমাধান: কোর্স গ্রিড গ্যাপ
-       এখানে গ্যাপ বাড়ানো হয়েছে এবং নিচের কোর্সগুলোকে আরও নিচে নামানো হয়েছে
-    --------------------------------- */
+
     .course-grid { 
-        grid-template-columns: 1fr !important; /* এক লাইনে একটি কোর্স */
+        grid-template-columns: 1fr !important;
         padding: 0 20px; 
-        gap: 60px !important; /* প্রতিটি কোর্সের মাঝে বড় গ্যাপ */
-        margin-top: 30px !important; /* গ্রিডের ওপরেও বাড়তি জায়গা */
+        gap: 60px !important;
+        margin-top: 30px !important;
     }
     .course-title { font-size: 16px; margin-top: 10px; padding: 0 5px; }
 
-    /* "MY COURSES" সাব-টাইটেলের নিচে গ্যাপ সামঞ্জস্য */
     .title-head .sub-title {
         margin-bottom: 10px !important;
         display: block;
