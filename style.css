@@ -17,26 +17,24 @@ nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
 
 /* --- Hero Section (Desktop) --- */
 .hero-section { 
-    min-height: 75vh; /* 🔥 কমানো হয়েছে */
+    min-height: 75vh;
     display: flex; 
     align-items: flex-end;
-    padding-top: 0px; /* 🔥 ফাঁকা কমানোর জন্য */
+    padding-top: 0px;
     position: relative; 
 }
 
-/* 🔥 গুরুত্বপূর্ণ fix */
 .hero-wrapper { 
     display: flex; 
-    align-items: flex-end; /* আগে center ছিল */
+    align-items: flex-end;
     justify-content: space-between; 
     width: 100%; 
 }
 
-/* 🔥 নিচের gap কমানো */
 .hero-text { 
     flex: 1.2; 
     z-index: 10; 
-    padding-bottom: 30px; /* আগে 60px ছিল */
+    padding-bottom: 30px;
     order: 1; 
 }
 
@@ -56,14 +54,50 @@ nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
 .si-glass { background: rgba(255, 255, 255, 0.05); width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; border: 1px solid rgba(255,255,255,0.1); transition: 0.4s; }
 .si-glass:hover { transform: translateY(-5px); background: #8a63ff; border-color: #8a63ff; box-shadow: 0 10px 15px rgba(138, 99, 255, 0.4); }
 
-.hero-image-area { flex: 1.2; position: relative; display: flex; justify-content: flex-end; align-items: flex-end; order: 2; }
+/* 🔥 FIXED PART */
+.hero-image-area { 
+    flex: 1.2; 
+    position: relative; 
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: flex-end; 
+    order: 2; 
+    margin-bottom: -40px; /* নিচে নামানো */
+}
+
 .profile-img { width: 100%; max-width: 650px; filter: drop-shadow(0 0 50px rgba(138, 99, 255, 0.15)); display: block; margin-bottom: -5px; z-index: 5;}
-.floating-glass-card { position: absolute; bottom: 120px; right: 20px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); padding: 15px 25px; border-radius: 15px; display: flex; align-items: center; gap: 15px; border: 1px solid rgba(255, 255, 255, 0.1); z-index: 15; }
+
+.floating-glass-card { 
+    position: absolute; 
+    bottom: 90px; /* 🔥 আগে 120px ছিল → নিচে নামানো */
+    right: 20px; 
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(15px); 
+    padding: 15px 25px; 
+    border-radius: 15px; 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    z-index: 15; 
+}
+
 .check-box { background: #8a63ff; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; }
 
 /* --- Status Bar --- */
 .divider-section { position: relative; z-index: 20; height: 0; }
-.mid-status-bar { background: #0b0b1a; padding: 35px 20px; border-radius: 15px; display: flex; justify-content: space-around; transform: translateY(-60%); border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+
+.mid-status-bar { 
+    background: #0b0b1a; 
+    padding: 35px 20px; 
+    border-radius: 15px; 
+    display: flex; 
+    justify-content: space-around; 
+    transform: translateY(-40%); /* 🔥 আগে -60% ছিল */
+    border: 1px solid rgba(255,255,255,0.05); 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4); 
+}
+
 .st-box { display: flex; align-items: center; gap: 15px; }
 .st-box i { font-size: 28px; color: #8a63ff; }
 .st-box strong { font-size: 20px; display: block; }
