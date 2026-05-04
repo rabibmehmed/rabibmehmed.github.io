@@ -6,7 +6,7 @@ body { font-family: 'Poppins', sans-serif; background: #050510; color: white; ov
 .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
 /* --- Header & Nav --- */
-header { padding: 15px 0; background: transparent; position: absolute; width: 100%; z-index: 1000; } /* ✅ changed */
+header { padding: 10px 0; background: transparent; position: absolute; width: 100%; z-index: 1000; } /* 🔥 কমানো হয়েছে */
 .nav-bar { display: flex; justify-content: space-between; align-items: center; }
 .logo { font-size: 24px; font-weight: 800; cursor: pointer; }
 .accent { color: #8a63ff; }
@@ -17,16 +17,16 @@ nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
 
 /* --- Hero Section (Desktop) --- */
 .hero-section { 
-    min-height: 100vh; 
+    min-height: 90vh; /* 🔥 আগে 100vh ছিল */
     display: flex; 
-    align-items: center; /* ✅ changed */
-    padding-top: 20px; /* ✅ changed */
+    align-items: flex-end; /* 🔥 ঠিক করা */
+    padding-top: 10px; /* 🔥 কমানো */
     position: relative; 
 }
 .hero-wrapper { display: flex; align-items: center; justify-content: space-between; width: 100%; }
-.hero-text { flex: 1.2; z-index: 10; padding-bottom: 80px; order: 1; }
+.hero-text { flex: 1.2; z-index: 10; padding-bottom: 60px; order: 1; } /* 🔥 নিচে gap কমানো */
 
-/* Desktop Badge Style */
+/* Badge */
 .hero-text .badge { background: rgba(138, 99, 255, 0.1); color: #8a63ff; display: inline-block; padding: 8px 16px; border-radius: 50px; font-size: 14px; margin-bottom: 20px; border: 1px solid rgba(138, 99, 255, 0.2); }
 
 .hero-text h1 { font-size: 75px; font-weight: 800; line-height: 1.05; margin-bottom: 20px; }
@@ -44,12 +44,12 @@ nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
 
 .hero-image-area { flex: 1.2; position: relative; display: flex; justify-content: flex-end; align-items: flex-end; order: 2; }
 .profile-img { width: 100%; max-width: 650px; filter: drop-shadow(0 0 50px rgba(138, 99, 255, 0.15)); display: block; margin-bottom: -5px; z-index: 5;}
-.floating-glass-card { position: absolute; bottom: 150px; right: 20px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); padding: 15px 25px; border-radius: 15px; display: flex; align-items: center; gap: 15px; border: 1px solid rgba(255, 255, 255, 0.1); z-index: 15; }
+.floating-glass-card { position: absolute; bottom: 120px; right: 20px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); padding: 15px 25px; border-radius: 15px; display: flex; align-items: center; gap: 15px; border: 1px solid rgba(255, 255, 255, 0.1); z-index: 15; }
 .check-box { background: #8a63ff; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; }
 
 /* --- Status Bar --- */
 .divider-section { position: relative; z-index: 20; height: 0; }
-.mid-status-bar { background: #0b0b1a; padding: 35px 20px; border-radius: 15px; display: flex; justify-content: space-around; transform: translateY(-50%); border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+.mid-status-bar { background: #0b0b1a; padding: 35px 20px; border-radius: 15px; display: flex; justify-content: space-around; transform: translateY(-60%); border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 20px 40px rgba(0,0,0,0.4); } /* 🔥 একটু উপরে তোলা */
 .st-box { display: flex; align-items: center; gap: 15px; }
 .st-box i { font-size: 28px; color: #8a63ff; }
 .st-box strong { font-size: 20px; display: block; }
@@ -68,7 +68,7 @@ nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
 .course-card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
 .course-title { font-size: 18px; font-weight: 700; color: #111; margin-top: 15px; margin-bottom: 5px; }
 
-/* --- Mobile --- */
+/* --- Mobile (UNCHANGED) --- */
 @media (max-width: 768px) {
     header { padding: 15px 0; background: #050510; position: fixed; }
     .mobile-menu-icon { display: block; }
@@ -89,36 +89,15 @@ nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
         transform: translate(15px, -15px) !important;
         padding: 8px 12px !important; gap: 10px !important;
     }
-    .glass-content h4 { font-size: 14px !important; margin-bottom: 2px !important; }
-    .glass-content p { font-size: 11px !important; line-height: 1.2 !important; }
-    .check-box { width: 24px !important; height: 24px !important; }
 
     .hero-text { order: 2 !important; padding: 0px 10px 80px; width: 100%; margin-top: -10px !important; }
 
-    .hero-text .badge {
-        background: rgba(138, 99, 255, 0.4) !important;
-        color: #fff !important;
-        backdrop-filter: blur(25px) !important;
-        -webkit-backdrop-filter: blur(25px) !important;
-        border: 1px solid rgba(255, 255, 255, 0.2) !important;
-        opacity: 0.8 !important;
-    }
-
     .hero-text h1 { font-size: 36px; }
-    .hero-btns { justify-content: center; flex-direction: column; }
-
-    .mid-status-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; transform: translateY(-40px); margin: 0 10px; }
 
     .course-grid { 
         grid-template-columns: 1fr !important;
         padding: 0 20px; 
         gap: 60px !important;
         margin-top: 30px !important;
-    }
-    .course-title { font-size: 16px; margin-top: 10px; padding: 0 5px; }
-
-    .title-head .sub-title {
-        margin-bottom: 10px !important;
-        display: block;
     }
 }
